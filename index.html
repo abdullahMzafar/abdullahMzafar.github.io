@@ -11,13 +11,16 @@
   <meta property="og:description" content="IT Specialist | Cloud & Linux | Integrations — all my professional links in one place." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://abdullahMzafar.github.io" />
-  <!-- After you add /assets/og-image.png (1200x630), the preview on LinkedIn/Twitter will be branded -->
+  <!-- Add /assets/og-image.png later; keep this absolute URL so LinkedIn can fetch it -->
   <meta property="og:image" content="https://abdullahMzafar.github.io/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Fonts & Icons -->
   https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap
-  <link hrefnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css
+  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css
+
+  <!-- Favicon (optional, add /favicon.ico later) -->
+  /favicon.ico
 
   <style>
     :root {
@@ -33,6 +36,7 @@
       --shadow: 0 10px 30px rgba(0,0,0,0.35);
       --radius: 14px;
 
+      /* Brand accents for buttons */
       --github: #24292e;
       --linkedin: #0a66c2;
       --credly: #ff6f00;
@@ -150,14 +154,13 @@
   <main class="wrap">
     <section class="card">
       <header>
-        <!-- Change "AZ" to "AM" or "AMZ" if you prefer -->
         <div class="avatar" aria-hidden="true">AZ</div>
         <div class="title">
           <h1>Abdullah M. Zafar</h1>
           <p>IT Specialist • Cloud &amp; Linux • Integrations</p>
           <p style="margin-top:6px;">
             <span style="opacity:.9">Toronto, ON</span> •
-            <ailto:abdullahmohammedzafar@gmail.comabdullahmohammedzafar@gmail.com</a>
+            mailto:abdullahmohammedzafar@gmail.comabdullahmohammedzafar@gmail.com</a>
           </p>
         </div>
         <div class="actions">
@@ -196,7 +199,8 @@
         </a>
 
         <!-- Credly -->
-        <a class="link-btn" href="https://www.credly.com/users/abdullah-mohammed-zafar/badges"k-icon brand-credly"><i class="fa-solid fa-certificate"></i></span>
+        https://www.credly.com/users/abdullah-mohammed-zafar/badges
+          <span class="link-icon brand-credly"><i class="fa-solid fa-certificate"></i></span>
           <span class="link-content">
             <span class="link-title">Credly Certifications</span>
             <span class="link-sub">Verified badges</span>
@@ -212,7 +216,7 @@
           </span>
         </a>
 
-        <!-- Docker Hub (confirm if handle changed) -->
+        <!-- Docker Hub -->
         https://hub.docker.com/repositories/amzafar19
           <span class="link-icon brand-docker"><i class="fa-brands fa-docker"></i></span>
           <span class="link-content">
@@ -222,7 +226,7 @@
         </a>
 
         <!-- Microsoft Learn -->
-        <a class="link-btn" href="https://learn/abdullahmohammedzafar-1216/
+        <a class="link-btnosoft.com/en-us/users/abdullahmohammedzafar-1216/
           <span class="link-icon brand-mslearn"><i class="fa-brands fa-microsoft"></i></span>
           <span class="link-content">
             <span class="link-title">Microsoft Learn</span>
@@ -230,7 +234,7 @@
           </span>
         </a>
 
-        <!-- Replit (confirm if handle changed) -->
+        <!-- Replit -->
         https://replit.com/@amzafar19
           <span class="link-icon brand-replit"><i class="fa-solid fa-code"></i></span>
           <span class="link-content">
@@ -249,7 +253,8 @@
         </a>
 
         <!-- Email -->
-        <a class="link-btn" href="mailto:abdullahmohammedzafar@gmail.com" target="_blankail"><i class="fa-solid fa-envelope"></i></span>
+        mailto:abdullahmohammedzafar@gmail.com
+          <span class="link-icon brand-email"><i class="fa-solid fa-envelope"></i></span>
           <span class="link-content">
             <span class="link-title">Contact</span>
             <span class="link-sub">abdullahmohammedzafar@gmail.com</span>
@@ -296,7 +301,8 @@
     FUTURE (when you're ready):
     - Add Plausible or GA script here for analytics.
     - Replace the avatar div with an <img> tag for your photo.
-    - Create /assets/og-image.png (1200x630) for LinkedIn preview.
+    - Create /assets/og-image.png (1200x630) and add /favicon.ico for branding.
+    - Add a contact form (Formspree/Netlify) section.
   -->
 </body>
 </html>
