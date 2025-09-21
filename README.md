@@ -24,7 +24,7 @@ For previewing HTML changes in different branches without merging, use [GitHub &
 Usage:
 Just prepend this fragment to the URL of the HTML file in your repo:
 https://htmlpreview.github.io/?. 
-Example: https://htmlpreview.github.io/?https://github.com/<your-username>/<your-repo>/blob/feature-branch/index.html
+Example: [https://htmlpreview.github.io/?https://github.com/<your-username>/<your-repo>/blob/feature-branch/index.html](https://htmlpreview.github.io/?https://github.com/abdullahMzafar/abdullahMzafar.github.io/blob/HTML-Preview/index.html)
 
 © Abdullah M. Zafar — All rights reserved.
 
