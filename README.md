@@ -4,7 +4,7 @@
 
 ![Focus](https://img.shields.io/badge/Focus-1E3A8A?style=for-the-badge&logo=target&logoColor=white)
 ![SaaS Deployment](https://img.shields.io/badge/SaaS-Deployment-1E3A8A?style=for-the-badge&logo=cloudsmith&logoColor=white)
-![Infrastructure as Code](https://img.shields.io/badge/Infrastructure%20as%20Code-1E3A8A?style=for-the-badge&logo=terraform&logoColor=white)
+![Infrastructure](https://img.shields.io/badge/Infrastructure-As%20Code-3E8E41?style=for-the-badge&logo=terraform&logoColor=white)
 
 ![Cloud Infrastructure](https://img.shields.io/badge/Cloud%20Infrastructure-1E3A8A?style=for-the-badge&logo=icloud&logoColor=white) 
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900)
