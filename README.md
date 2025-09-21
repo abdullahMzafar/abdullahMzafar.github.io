@@ -50,6 +50,8 @@
 ![Linux CLI](https://img.shields.io/badge/Linux%20Shell-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![macOS CLI](https://img.shields.io/badge/macOS%20Terminal-6B7280?style=for-the-badge&logo=apple&logoColor=white)
 
+![Operating Systems](https://img.shields.io/badge/Operating%20Systems-3B82F6?style=for-the-badge&logo=linux&logoColor=white) ![Linux Distros](https://img.shields.io/badge/Linux-RHEL%20%7C%20Ubuntu%20%7C%20CentOS%20%7C%20Fedora-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Windows](https://img.shields.io/badge/Windows-XP%20%7C%20Vista%20%7C%208%20%7C%2010%20%7C%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white) ![Windows Server](https://img.shields.io/badge/Windows%20Server-2016%20%7C%202019%20%7C%202022-2563EB?style=for-the-badge&logo=windows&logoColor=white) ![macOS](https://img.shields.io/badge/macOS-555555?style=for-the-badge&logo=apple&logoColor=white)
+
 
 Welcome to the repository for my **personal links landing page**:  
 🔗 **Live Page:** [abdullahmzafar.github.io](https://abdullahmzafar.github.io/)
