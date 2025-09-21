@@ -3,8 +3,7 @@
 [![View Live Site](https://img.shields.io/badge/View%20Live%20Site-34A853?style=for-the-badge&logo=githubpages&logoColor=white)](https://abdullahmzafar.github.io/)
 
 ![Focus](https://img.shields.io/badge/Focus-EA4335?style=for-the-badge&logo=target&logoColor=white)
-![SaaS Deployment](https://img.shields.io/badge/SaaS%20Deployment-EA4335?style=for-the-badge&logo=cloudsmith&logoColor=white)
-![Infrastructure as Code](https://img.shields.io/badge/Infrastructure%20as%20Code-EA4335?style=for-the-badge&logo=terraform&logoColor=white)
+![SaaS Deployment](https://img.shields.io/badge/SaaS-Deployment-1E3A8A?style=for-the-badge&logo=cloudsmith&logoColor=white) ![Infrastructure](https://img.shields.io/badge/Infrastructure-As%20Code-3E8E41?style=for-the-badge&logo=terraform&logoColor=white)
 
 ![Cloud Infrastructure](https://img.shields.io/badge/Cloud%20Infrastructure-4285F4?style=for-the-badge&logo=icloud&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
