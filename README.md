@@ -23,7 +23,8 @@ This landing page is built to be:
 For previewing HTML changes in different branches without merging, use [GitHub & BitBucket HTML Preview](https://github.com/htmlpreview/htmlpreview.github.com)[Thanks to the author].
 Usage:
 Just prepend this fragment to the URL of the HTML file in your repo:
-https://htmlpreview.github.io/?. Example: https://htmlpreview.github.io/?https://github.com/<your-username>/<your-repo>/blob/feature-branch/index.html
+https://htmlpreview.github.io/?. 
+Example: https://htmlpreview.github.io/?https://github.com/<your-username>/<your-repo>/blob/feature-branch/index.html
 
 © Abdullah M. Zafar — All rights reserved.
 
