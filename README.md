@@ -1,26 +1,21 @@
 # 🌐 Abdullah M. Zafar — Professional Links
 
 [![View Live Site](https://img.shields.io/badge/View%20Live%20Site-000?style=for-the-badge&logo=githubpages&logoColor=white)](https://abdullahmzafar.github.io/)
-![SaaS Deployment](https://img.shields.io/badge/SaaS-Deployment-4F46E5?style=for-the-badge&logo=cloudsmith&logoColor=white)
-![Infrastructure](https://img.shields.io/badge/Infrastructure-As%20Code-3E8E41?style=for-the-badge&logo=terraform&logoColor=white)
+
+![Focus](https://img.shields.io/badge/Focus-1E3A8A?style=for-the-badge&logo=target&logoColor=white)
+![SaaS Deployment](https://img.shields.io/badge/SaaS-Deployment-1E3A8A?style=for-the-badge&logo=cloudsmith&logoColor=white)
+![Infrastructure as Code](https://img.shields.io/badge/Infrastructure%20as%20Code-1E3A8A?style=for-the-badge&logo=terraform&logoColor=white)
 
 ![Cloud Infrastructure](https://img.shields.io/badge/Cloud%20Infrastructure-1E3A8A?style=for-the-badge&logo=icloud&logoColor=white) 
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![Google Cloud](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![SaaS Deployment](https://img.shields.io/badge/SaaS-Deployment-4F46E5?style=for-the-badge&logo=cloudsmith&logoColor=white)
 
-![Operating Systems](https://img.shields.io/badge/Operating%20Systems-1E3A8A?style=for-the-badge&logo=linux&logoColor=white) 
-![Linux](https://img.shields.io/badge/Linux-RHEL%20%7C%20Ubuntu%20%7C%20CentOS%20%7C%20Fedora-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white)
-![Windows](https://img.shields.io/badge/Windows-XP%20%7C%20Vista%20%7C%208%20%7C%2010%20%7C%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![Windows Server](https://img.shields.io/badge/Windows%20Server-2016%20%7C%202019%20%7C%202022-00A4EF?style=for-the-badge&logo=windows&logoColor=white)
-
-![Endpoint Management](https://img.shields.io/badge/Endpoint%20Management-1E3A8A?style=for-the-badge&logo=microsoftintune&logoColor=white) 
-![Entra ID](https://img.shields.io/badge/Entra%20ID-(Azure%20AD)-2563EB?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Endpoint Management](https://img.shields.io/badge/Endpoint%20Management-1E3A8A?style=for-the-badge&logo=microsoftintune&logoColor=white)
+![Entra ID](https://img.shields.io/badge/Entra%20ID-2563EB?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![GPO](https://img.shields.io/badge/Group%20Policy-374151?style=for-the-badge&logo=windows&logoColor=white)
 ![Intune](https://img.shields.io/badge/Intune-0078D4?style=for-the-badge&logo=microsoftintune&logoColor=white)
 ![SCCM](https://img.shields.io/badge/SCCM-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
-![GPO](https://img.shields.io/badge/Group%20Policy-GPO-374151?style=for-the-badge)
 
 ![Automation & Configuration](https://img.shields.io/badge/Automation%20%26%20Configuration-1E3A8A?style=for-the-badge&logo=terraform&logoColor=white) 
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
@@ -55,6 +50,13 @@
 ![Windows CLI](https://img.shields.io/badge/Windows-Command%20Line-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Linux CLI](https://img.shields.io/badge/Linux-Shell-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![macOS CLI](https://img.shields.io/badge/macOS-Terminal-333333?style=for-the-badge&logo=apple&logoColor=white)
+
+![Operating Systems](https://img.shields.io/badge/Operating%20Systems-1E3A8A?style=for-the-badge&logo=linux&logoColor=white) 
+![Linux](https://img.shields.io/badge/Linux-RHEL%20%7C%20Ubuntu%20%7C%20CentOS%20%7C%20Fedora-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-XP%20%7C%20Vista%20%7C%208%20%7C%2010%20%7C%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Windows Server](https://img.shields.io/badge/Windows%20Server-2016%20%7C%202019%20%7C%202022-00A4EF?style=for-the-badge&logo=windows&logoColor=white)
+
 
 Welcome to the repository for my **personal links landing page**:  
 🔗 **Live Page:** [abdullahmzafar.github.io](https://abdullahmzafar.github.io/)
