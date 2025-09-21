@@ -13,17 +13,17 @@
 
 ![Endpoint Management](https://img.shields.io/badge/Endpoint%20Management-1E3A8A?style=for-the-badge&logo=microsoftintune&logoColor=white)
 ![Entra ID](https://img.shields.io/badge/Entra%20ID-2563EB?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![GPO](https://img.shields.io/badge/Group%20Policy-374151?style=for-the-badge&logo=windows&logoColor=white)
+![GPO](https://img.shields.io/badge/GPO-374151?style=for-the-badge&logo=windows&logoColor=white)
 ![Intune](https://img.shields.io/badge/Intune-0078D4?style=for-the-badge&logo=microsoftintune&logoColor=white)
 ![SCCM](https://img.shields.io/badge/SCCM-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
 
 ![Automation & Configuration](https://img.shields.io/badge/Automation%20%26%20Configuration-1E3A8A?style=for-the-badge&logo=terraform&logoColor=white) 
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
 ![Puppet](https://img.shields.io/badge/Puppet-FFAE1A?style=for-the-badge&logo=puppet&logoColor=black)
 ![Chef](https://img.shields.io/badge/Chef-F09820?style=for-the-badge&logo=chef&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 
 ![Database Management](https://img.shields.io/badge/Database%20Management-1E3A8A?style=for-the-badge&logo=databricks&logoColor=white) 
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
@@ -52,10 +52,10 @@
 ![macOS CLI](https://img.shields.io/badge/macOS-Terminal-333333?style=for-the-badge&logo=apple&logoColor=white)
 
 ![Operating Systems](https://img.shields.io/badge/Operating%20Systems-1E3A8A?style=for-the-badge&logo=linux&logoColor=white) 
-![Linux](https://img.shields.io/badge/Linux-RHEL%20%7C%20Ubuntu%20%7C%20CentOS%20%7C%20Fedora-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white)
-![Windows](https://img.shields.io/badge/Windows-XP%20%7C%20Vista%20%7C%208%20%7C%2010%20%7C%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Windows Server](https://img.shields.io/badge/Windows%20Server-2016%20%7C%202019%20%7C%202022-00A4EF?style=for-the-badge&logo=windows&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-RHEL%20%7C%20Ubuntu%20%7C%20CentOS%20%7C%20Fedora-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Windows](https://img.shields.io/badge/Windows-XP%20%7C%20Vista%20%7C%208%20%7C%2010%20%7C%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white)
 
 
 Welcome to the repository for my **personal links landing page**:  
