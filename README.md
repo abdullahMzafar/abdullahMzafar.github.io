@@ -1,23 +1,23 @@
 # 🌐 Abdullah M. Zafar — Professional Links
 
-[![View Live Site](https://img.shields.io/badge/View%20Live%20Site-3B82F6?style=for-the-badge&logo=githubpages&logoColor=white)](https://abdullahmzafar.github.io/)
+[![View Live Site](https://img.shields.io/badge/View%20Live%20Site-34A853?style=for-the-badge&logo=githubpages&logoColor=white)](https://abdullahmzafar.github.io/)
 
-![Focus](https://img.shields.io/badge/Focus-3B82F6?style=for-the-badge&logo=target&logoColor=white)
-![SaaS Deployment](https://img.shields.io/badge/SaaS-Deployment-1E3A8A?style=for-the-badge&logo=cloudsmith&logoColor=white) ![Infrastructure](https://img.shields.io/badge/Infrastructure-As%20Code-3E8E41?style=for-the-badge&logo=terraform&logoColor=white)
+![Focus](https://img.shields.io/badge/Focus-EA4335?style=for-the-badge&logo=target&logoColor=white)
+![SaaS Deployment](https://img.shields.io/badge/SaaS%20Deployment-EA4335?style=for-the-badge&logo=cloudsmith&logoColor=white)
+![Infrastructure as Code](https://img.shields.io/badge/Infrastructure%20as%20Code-EA4335?style=for-the-badge&logo=terraform&logoColor=white)
 
-![Cloud Infrastructure](https://img.shields.io/badge/Cloud%20Infrastructure-3B82F6?style=for-the-badge&logo=icloud&logoColor=white)
+![Cloud Infrastructure](https://img.shields.io/badge/Cloud%20Infrastructure-4285F4?style=for-the-badge&logo=icloud&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-0089D6?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![Google Cloud](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
 
-
-![Endpoint Management](https://img.shields.io/badge/Endpoint%20Management-3B82F6?style=for-the-badge&logo=microsoftintune&logoColor=white)
+![Endpoint Management](https://img.shields.io/badge/Endpoint%20Management-34A853?style=for-the-badge&logo=microsoftintune&logoColor=white)
 ![Entra ID](https://img.shields.io/badge/Entra%20ID-2563EB?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![GPO](https://img.shields.io/badge/Group%20Policy-6B7280?style=for-the-badge&logo=windows&logoColor=white)
 ![Intune](https://img.shields.io/badge/Intune-0078D4?style=for-the-badge&logo=microsoftintune&logoColor=white)
 ![SCCM](https://img.shields.io/badge/SCCM-0067B8?style=for-the-badge&logo=microsoft&logoColor=white)
 
-![Automation & Configuration](https://img.shields.io/badge/Automation%20%26%20Configuration-3B82F6?style=for-the-badge&logo=terraform&logoColor=white)
+![Automation & Configuration](https://img.shields.io/badge/Automation%20%26%20Configuration-FBBC05?style=for-the-badge&logo=terraform&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2396ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
@@ -25,37 +25,32 @@
 ![Puppet](https://img.shields.io/badge/Puppet-FFAE1A?style=for-the-badge&logo=puppet&logoColor=black)
 ![Chef](https://img.shields.io/badge/Chef-FE7C3F?style=for-the-badge&logo=chef&logoColor=white)
 
-![Database Management](https://img.shields.io/badge/Database%20Management-3B82F6?style=for-the-badge&logo=databricks&logoColor=white)
+![Database Management](https://img.shields.io/badge/Database%20Management-34A853?style=for-the-badge&logo=databricks&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-00618A?style=for-the-badge&logo=mysql&logoColor=white)
 ![MSSQL](https://img.shields.io/badge/MS%20SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 ![InterBase](https://img.shields.io/badge/InterBase-FF6600?style=for-the-badge&logo=database&logoColor=white)
 
-![Monitoring & Observability](https://img.shields.io/badge/Monitoring%20%26%20Observability-3B82F6?style=for-the-badge&logo=prometheus&logoColor=white)
+![Monitoring & Observability](https://img.shields.io/badge/Monitoring%20%26%20Observability-4285F4?style=for-the-badge&logo=prometheus&logoColor=white)
 ![Nagios](https://img.shields.io/badge/Nagios-4B5563?style=for-the-badge&logo=nagios&logoColor=white)
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
 
-![Ticketing & Service Management](https://img.shields.io/badge/Ticketing%20%26%20Service%20Management-3B82F6?style=for-the-badge&logo=salesforce&logoColor=white)
-![EasyVista](https://img.shields.io/badge/EasyVista-4F46E5?style=for-the-badge&logo=salesforce&logoColor=white)
+![Ticketing & Service Management](https://img.shields.io/badge/Ticketing%20%26%20Service%20Management-FBBC05?style=for-the-badge&logo=salesforce&logoColor=white)
+![EasyVista](https://img.shields.io/badge/EasyVista-4F46E5?style=for-the-badge&logo=appstore&logoColor=white)
 ![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white)
 ![TeamSupport](https://img.shields.io/badge/TeamSupport-1D4ED8?style=for-the-badge&logo=teamspeak&logoColor=white)
 ![ITIL](https://img.shields.io/badge/ITIL-9333EA?style=for-the-badge&logo=bookstack&logoColor=white)
 
-![Scripting & Programming](https://img.shields.io/badge/Scripting%20%26%20Programming-3B82F6?style=for-the-badge&logo=python&logoColor=white)
+![Scripting & Programming](https://img.shields.io/badge/Scripting%20%26%20Programming-34A853?style=for-the-badge&logo=python&logoColor=white)
 ![PowerShell](https://img.shields.io/badge/PowerShell-2563EB?style=for-the-badge&logo=powershell&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-![Command Line Interfaces](https://img.shields.io/badge/Command%20Line%20Interfaces-3B82F6?style=for-the-badge&logo=gnometerminal&logoColor=white)
+![Command Line Interfaces](https://img.shields.io/badge/Command%20Line%20Interfaces-EA4335?style=for-the-badge&logo=gnometerminal&logoColor=white)
 ![Windows CLI](https://img.shields.io/badge/Windows%20CLI-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Linux CLI](https://img.shields.io/badge/Linux%20Shell-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![macOS CLI](https://img.shields.io/badge/macOS%20Terminal-374151?style=for-the-badge&logo=apple&logoColor=white)
+![macOS CLI](https://img.shields.io/badge/macOS%20Terminal-6B7280?style=for-the-badge&logo=apple&logoColor=white)
 
-![Operating Systems](https://img.shields.io/badge/Operating%20Systems-3B82F6?style=for-the-badge&logo=linux&logoColor=white)
-![Linux Distros](https://img.shields.io/badge/Linux-RHEL%20%7C%20Ubuntu%20%7C%20CentOS%20%7C%20Fedora-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Windows](https://img.shields.io/badge/Windows-XP%20%7C%20Vista%20%7C%208%20%7C%2010%20%7C%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![Windows Server](https://img.shields.io/badge/Windows%20Server-2016%20%7C%202019%20%7C%202022-2563EB?style=for-the-badge&logo=windows&logoColor=white)
-![macOS](https://img.shields.io/badge/macOS-555555?style=for-the-badge&logo=apple&logoColor=white)
 
 Welcome to the repository for my **personal links landing page**:  
 🔗 **Live Page:** [abdullahmzafar.github.io](https://abdullahmzafar.github.io/)
