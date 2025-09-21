@@ -1,12 +1,13 @@
 # 🌐 Abdullah M. Zafar — Professional Links
 
 [![View Live Site](https://img.shields.io/badge/View%20Live%20Site-000?style=for-the-badge&logo=githubpages&logoColor=white)](https://abdullahmzafar.github.io/)
+![SaaS Deployment](https://img.shields.io/badge/SaaS-Deployment-4F46E5?style=for-the-badge&logo=cloudsmith&logoColor=white)
+![Infrastructure](https://img.shields.io/badge/Infrastructure-As%20Code-3E8E41?style=for-the-badge&logo=terraform&logoColor=white)
 
 **Cloud Infrastructure**  
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![Google Cloud](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![SaaS Deployment](https://img.shields.io/badge/SaaS-Deployment-4F46E5?style=for-the-badge&logo=cloudsmith&logoColor=white)
 
 **Operating Systems**  
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
@@ -14,8 +15,17 @@
 ![RHEL](https://img.shields.io/badge/RHEL-EE0000?style=for-the-badge&logo=redhat&logoColor=white)
 ![CentOS](https://img.shields.io/badge/CentOS-262577?style=for-the-badge&logo=centos&logoColor=white)
 ![Fedora](https://img.shields.io/badge/Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white)
-![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white)
+
+![Windows XP](https://img.shields.io/badge/Windows%20XP-003399?style=for-the-badge&logo=windowsxp&logoColor=white)
+![Windows Vista](https://img.shields.io/badge/Windows%20Vista-0096D6?style=for-the-badge&logo=windows&logoColor=white)
+![Windows 8](https://img.shields.io/badge/Windows%208-00ADEF?style=for-the-badge&logo=windows&logoColor=white)
+![Windows 10](https://img.shields.io/badge/Windows%2010-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Windows 11](https://img.shields.io/badge/Windows%2011-0A84FF?style=for-the-badge&logo=windows11&logoColor=white)
+
+![Windows Server 2016](https://img.shields.io/badge/Windows%20Server-2016-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Windows Server 2019](https://img.shields.io/badge/Windows%20Server-2019-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Windows Server 2022](https://img.shields.io/badge/Windows%20Server-2022-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
 **Endpoint Management**  
 ![Entra ID](https://img.shields.io/badge/Entra%20ID-(Azure%20AD)-2563EB?style=for-the-badge&logo=microsoftazure&logoColor=white)
@@ -24,12 +34,12 @@
 ![GPO](https://img.shields.io/badge/Group%20Policy-GPO-374151?style=for-the-badge)
 
 **Automation and Configuration Management**  
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
 ![Puppet](https://img.shields.io/badge/Puppet-FFAE1A?style=for-the-badge&logo=puppet&logoColor=black)
 ![Chef](https://img.shields.io/badge/Chef-F09820?style=for-the-badge&logo=chef&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 
 **Database Management**  
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
@@ -56,6 +66,7 @@
 ![Windows CLI](https://img.shields.io/badge/Windows-Command%20Line-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Linux CLI](https://img.shields.io/badge/Linux-Shell-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![macOS CLI](https://img.shields.io/badge/macOS-Terminal-333333?style=for-the-badge&logo=apple&logoColor=white)
+
 Welcome to the repository for my **personal links landing page**:  
 🔗 **Live Page:** [abdullahmzafar.github.io](https://abdullahmzafar.github.io/)
 
