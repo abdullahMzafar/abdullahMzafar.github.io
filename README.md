@@ -1,29 +1,35 @@
 # 🌐 Abdullah M. Zafar — Professional Links
 
 [![View Live Site](https://img.shields.io/badge/View%20Live%20Site-000?style=for-the-badge&logo=githubpages&logoColor=white)](https://abdullahmzafar.github.io/)
-[![Built with HTML](https://img.shields.io/badge/HTML-5E5E5E?style=for-the-badge&logo=html5&logoColor=E34F26)](#)
-[![Built with CSS](https://img.shields.io/badge/CSS-5E5E5E?style=for-the-badge&logo=css3&logoColor=1572B6)](#)
-[![Responsive](https://img.shields.io/badge/Responsive-Yes-44cc11?style=for-the-badge)](#)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Infrastructure](https://img.shields.io/badge/Infrastructure-As%20Code-3E8E41?style=for-the-badge&logo=terraform&logoColor=white)
 
 Welcome to the repository for my **personal links landing page**:  
 🔗 **Live Page:** [abdullahmzafar.github.io](https://abdullahmzafar.github.io/)
 
-This project provides a **central hub** for all my professional links and achievements — including GitHub projects, LinkedIn profile, technical certifications, learning platforms, and direct access to my email and resume.
+This project is a **single, static HTML page** with inline CSS and a lightweight JavaScript dark/light theme toggle.  
+It serves as a **central hub** for my professional profiles, certifications, and contact information.
 
 ---
 
 ## 📖 Overview
-This landing page is built to be:
-- **Clean & Responsive:** Works across desktop and mobile devices.
-- **Accessible:** Semantic HTML5 with keyboard-friendly navigation.
-- **Lightweight:** Pure HTML, CSS, and a tiny bit of vanilla JavaScript.
-- **Customizable:** Easy to update links or styles for future changes.
+This landing page is:
+- **Clean & Responsive** – Works seamlessly on desktop and mobile
+- **Accessible** – Semantic HTML5, keyboard-friendly navigation
+- **Lightweight** – Fully client-side, no backend needed
+- **Easy to Maintain** – Just edit `index.html` to update links or content
 
-### ✨ Features:
+---
+
+## ✨ Features
 - 🔗 **Quick Links:** GitHub, LinkedIn, Credly, Google Cloud, Microsoft Learn, Docker, Replit, Coursera  
-- 📧 **Direct Contact:** Email button opens your mail client  
+- 📧 **Direct Contact:** One-click email link  
 - 📄 **Resume:** Downloadable PDF  
-- 🌙 **Dark/Light Mode:** User preference stored in localStorage  
+- 🌙 **Dark/Light Mode:** Saves preference locally  
 
 ---
 
