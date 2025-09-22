@@ -1,12 +1,4 @@
-# 🌐 Abdullah M. Zafar — Professional Links
-
-Welcome to the repository for my **personal links landing page**:  
-🔗 **Live Page:** [abdullahmzafar.github.io](https://abdullahmzafar.github.io/)
-
-This project is a **single, static HTML page** with inline CSS and a lightweight JavaScript dark/light theme toggle.  
-It serves as a **central hub** for my professional profiles, certifications, and contact information. Here are the preview of the skillset presented by badges under relevant sections.
-
-[![View Live Site](https://img.shields.io/badge/View%20Live%20Site-34A853?style=for-the-badge&logo=githubpages&logoColor=white)](https://abdullahmzafar.github.io/)
+# 🌐 Abdullah M. Zafar — Scope of Expertise
 
 ![Focus](https://img.shields.io/badge/Focus-EA4335?style=for-the-badge&logo=target&logoColor=white)
 ![SaaS Deployment](https://img.shields.io/badge/SaaS-Deployment-1E3A8A?style=for-the-badge&logo=cloudsmith&logoColor=white) 
