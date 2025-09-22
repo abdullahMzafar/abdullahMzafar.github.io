@@ -35,12 +35,6 @@ It serves as a **central hub** for my professional profiles, certifications, and
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
 
-![Endpoint Management](https://img.shields.io/badge/Endpoint%20Management-34A853?style=for-the-badge&logo=microsoftintune&logoColor=white)
-![Entra ID](https://img.shields.io/badge/Entra%20ID-2563EB?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![GPO](https://img.shields.io/badge/Group%20Policy-6B7280?style=for-the-badge&logo=windows&logoColor=white)
-![Intune](https://img.shields.io/badge/Intune-0078D4?style=for-the-badge&logo=microsoftintune&logoColor=white)
-![SCCM](https://img.shields.io/badge/SCCM-0067B8?style=for-the-badge&logo=microsoft&logoColor=white)
-
 ![Endpoint Management](https://img.shields.io/badge/Endpoint%20Management-34A853?style=for-the-badge&logo=datadog&logoColor=white)
 ![Entra ID](https://img.shields.io/badge/Entra%20ID-2563EB?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![GPO](https://img.shields.io/badge/GPO-6B7280?style=for-the-badge&logo=windows&logoColor=white)
