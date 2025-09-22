@@ -17,11 +17,6 @@ It serves as a **central hub** for my professional profiles, certifications, and
 ![Azure](https://img.shields.io/badge/Azure-0089D6?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![Google Cloud](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
 
-![Cloud Infrastructure](https://img.shields.io/badge/Cloud%20Infrastructure-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0089D6?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-
 ![Automation & Configuration](https://img.shields.io/badge/Automation%20%26%20Configuration-FBBC05?style=for-the-badge&logo=terraform&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2396ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
@@ -34,6 +29,9 @@ It serves as a **central hub** for my professional profiles, certifications, and
 ![MySQL](https://img.shields.io/badge/MySQL-00618A?style=for-the-badge&logo=mysql&logoColor=white)
 ![MSSQL](https://img.shields.io/badge/MS%20SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 ![InterBase](https://img.shields.io/badge/InterBase-FF6600?style=for-the-badge&logo=database&logoColor=white)
+![MSSQL](https://img.shields.io/badge/MS%20SQL-CC2927?style=for-the-badge&logo=microsoft&logoColor=white)
+![InterBase](https://img.shields.io/badge/InterBase-FF6600?style=for-the-badge&logo=firebird&logoColor=white)
+
 
 ![Monitoring & Observability](https://img.shields.io/badge/Monitoring%20%26%20Observability-4285F4?style=for-the-badge&logo=prometheus&logoColor=white)
 ![Nagios](https://img.shields.io/badge/Nagios-4B5563?style=for-the-badge&logo=nagios&logoColor=white)
