@@ -74,6 +74,29 @@
     .footer { text-align: center; margin-top: 16px; color: var(--muted); font-size: 12.8px; }
     .divider { margin: 18px 0 8px; height: 1px; background: var(--border); border-radius: 1px; }
     @media (max-width: 620px) { header { grid-template-columns: 72px 1fr; } .actions { grid-column: 1 / -1; justify-items: start; } .avatar { width: 72px; height: 72px; font-size: 24px; } }
+    .button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 300px;
+  margin: 2rem auto;
+}
+
+.button-grid .btn {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button-grid .btn:hover {
+  background-color: #2563eb;
+}
   </style>
 </head>
 <body>
@@ -95,6 +118,7 @@
           </button>
           <a href="mailto:abdullahmohammedzafar@gmail.com" class="btn-mini"><i class="fa-solid fa-envelope"></i> Email</a>
           <a href="./Abdullah_Resume.pdf" class="btn-mini" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
+          <a href="skillset.html" class="btn" target="_blank">Skillset</a>
         </div>
       </header>
 
