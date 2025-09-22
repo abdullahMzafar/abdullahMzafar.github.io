@@ -1,7 +1,4 @@
-# 🌐 Abdullah M. Zafar — Professional Links
-
-Welcome to the repository for my **personal links landing page**:  
-🔗 **Live Page:** [abdullahmzafar.github.io](https://abdullahmzafar.github.io/)
+# 🌐 Abdullah M. Zafar — Scope of Expertise
 
 [![View Live Site](https://img.shields.io/badge/View%20Live%20Site-34A853?style=for-the-badge&logo=githubpages&logoColor=white)](https://abdullahmzafar.github.io/)
 
