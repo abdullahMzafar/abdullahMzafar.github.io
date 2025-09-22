@@ -29,9 +29,6 @@ It serves as a **central hub** for my professional profiles, certifications, and
 ![MySQL](https://img.shields.io/badge/MySQL-00618A?style=for-the-badge&logo=mysql&logoColor=white)
 ![MSSQL](https://img.shields.io/badge/MS%20SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 ![InterBase](https://img.shields.io/badge/InterBase-FF6600?style=for-the-badge&logo=database&logoColor=white)
-![MSSQL](https://img.shields.io/badge/MS%20SQL-CC2927?style=for-the-badge&logo=microsoft&logoColor=white)
-![InterBase](https://img.shields.io/badge/InterBase-FF6600?style=for-the-badge&logo=firebird&logoColor=white)
-
 
 ![Monitoring & Observability](https://img.shields.io/badge/Monitoring%20%26%20Observability-4285F4?style=for-the-badge&logo=prometheus&logoColor=white)
 ![Nagios](https://img.shields.io/badge/Nagios-4B5563?style=for-the-badge&logo=nagios&logoColor=white)
@@ -44,13 +41,11 @@ It serves as a **central hub** for my professional profiles, certifications, and
 ![Intune](https://img.shields.io/badge/Intune-0078D4?style=for-the-badge&logo=microsoftintune&logoColor=white)
 ![SCCM](https://img.shields.io/badge/SCCM-0067B8?style=for-the-badge&logo=microsoft&logoColor=white)
 
-![Nagios](https://img.shields.io/badge/Nagios-4B5563?style=for-the-badge&logo=nagios&logoColor=white)
-
+![Endpoint Management](https://img.shields.io/badge/Endpoint%20Management-34A853?style=for-the-badge&logo=datadog&logoColor=white)
 ![Entra ID](https://img.shields.io/badge/Entra%20ID-2563EB?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![GPO](https://img.shields.io/badge/GPO-6B7280?style=for-the-badge&logo=windows&logoColor=white)
 ![Intune](https://img.shields.io/badge/Intune-0078D4?style=for-the-badge&logo=microsoftintune&logoColor=white)
 ![SCCM](https://img.shields.io/badge/SCCM-0067B8?style=for-the-badge&logo=microsoft&logoColor=white)
-
 
 ![Ticketing & Service Management](https://img.shields.io/badge/Ticketing%20%26%20Service%20Management-FBBC05?style=for-the-badge&logo=salesforce&logoColor=white)
 ![EasyVista](https://img.shields.io/badge/EasyVista-4F46E5?style=for-the-badge&logo=appstore&logoColor=white)
