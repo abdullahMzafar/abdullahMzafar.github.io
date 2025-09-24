@@ -114,9 +114,16 @@
   .title h1 { margin: 0 0 6px; font-size: 26px; line-height: 1.2; }
   .title p { margin: 0; color: var(--muted); font-size: 14.5px; }
 
-  .actions { display: grid; gap: 8px; justify-items: end; }
+  .actions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 10px;
+    justify-items: end;
+    align-items: center;
+    margin-top: 5px;
+  }
 
-  .btn-mini {
+  .actions-grid .btn-mini {
     border: 1px solid var(--border);
     background: var(--link-bg);
     color: var(--text);
@@ -126,11 +133,18 @@
     text-decoration: none;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     cursor: pointer;
+    min-width: 120px;
+    text-align: center;
+    transition: background 0.2s ease-in-out, transform 0.1s ease-in-out;
   }
 
-  .btn-mini:hover { filter: brightness(1.05); }
+  .actions-grid .btn-mini:hover {
+    filter: brightness(1.05);
+    transform: translateY(-1px);
+  }
 
   .links {
     margin-top: 18px;
@@ -227,7 +241,7 @@
             <a href="mailto:abdullahmohammedzafar@gmail.com">abdullahmohammedzafar@gmail.com</a>
           </p>
         </div>
-        <div class="actions">
+        <div class="actions-grid">
           <button id="themeToggle" class="btn-mini" aria-label="Toggle dark mode">
             <i class="fa-solid fa-circle-half-stroke"></i> Theme
           </button>
