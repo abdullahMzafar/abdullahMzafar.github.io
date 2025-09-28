@@ -103,8 +103,10 @@
   }
 
     /* top-card.css */
+
   .top-card {
     position: relative;
+    aspect-ratio: 21 / 9;
     isolation: isolate;             /* keep overlay effects inside the card */
     color: #f5f8ff;
     background:
@@ -118,7 +120,10 @@
 
   /* Optional: tweak crop on small screens */
   @media (max-width: 640px) {
-    .top-card { background-position: 60% center; }
+    .top-card { 
+      background-position: 60% center;
+      aspect-ratio: 16 / 9;
+    }
   }
 
   /* Content spacing inside the card */
