@@ -137,10 +137,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.8;
+    object-position: center 70%; /* 👈 shifts image down vertically */
+    /* transform: translateY(10%); /* 👈 pushes image 10% downward */
+    opacity: 1;
     z-index: 1;
   }
 
+/*
   .avatar span {
     position: relative;
     font-weight: 600;
@@ -149,7 +152,6 @@
     z-index: 2;
   }
 
-/*
   .avatar {
     width: 88px;
     height: 88px;
@@ -254,7 +256,7 @@
     font-size: 12.8px;
   }
 
-  .divider { margin: 18px 0 8px; height: 1px; background: var(--border); border-radius: 1px; }
+  /* .divider { margin: 18px 0 8px; height: 1px; background: var(--border); border-radius: 1px; } */
 
   @media (max-width: 620px) {
     header { grid-template-columns: 72px 1fr; }
@@ -295,16 +297,16 @@
     <section class="card">
       <header>
         <div class="avatar">
-          <img src="avatar-tech-bg.svg" alt="Technical background" class="avatar-bg">
-          <span>AMZ</span>
+          <img src="WhiteCircuitHandshakeWCuff.png" alt="Technical background" class="avatar-bg">
+          <!-- <span>AMZ</span> -->
         </div>
         <div class="title">
           <h1>Abdullah Mohammed Zafar</h1>
           <p class="subtitle">
-            • Cloud, Linux & Infrastructure Engineer
+            • Cloud, Linux &amp; Infrastructure Specialist
           </p>
           <p class="subtitle">
-            • Integrations & Endpoint Support
+            • Integrations &amp; Endpoint Support
           </p>
         </div>
         <div class="actions-grid">
@@ -320,7 +322,7 @@
         </div>
       </header>
 
-      <div class="divider"></div>
+      <!-- <div class="divider"></div> -->
 
       <nav class="links">
 
