@@ -270,20 +270,25 @@
     box-shadow: var(--shadow);
   }
 
+      /* Link icon styles */
   .link-icon {
     width: 40px;
     height: 40px;
     border-radius: 10px;
     display: grid;
     place-items: center;
-    color: white;
-    [data-theme="light"] .link-icon,
-    [data-theme="light"] .link-icon i {
-    color: var(--accent);     /* blue icons for light theme */
-    filter: none;             /* remove any invert/brightness that might affect color */
+    color: white;           /* default = white for dark theme */
     flex: 0 0 auto;
     font-size: 18px;
   }
+  
+  /* Override for light theme: make icons blue so they are visible */
+  [data-theme="light"] .link-icon,
+  [data-theme="light"] .link-icon i {
+    color: var(--accent);   /* use accent blue for visibility */
+    filter: none;           /* remove any inverted/brightness filters */
+  }
+
 
   .link-content { display: grid; gap: 4px; }
   .link-title { font-weight: 600; font-size: 15.5px; }
