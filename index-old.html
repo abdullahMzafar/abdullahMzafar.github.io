@@ -1,13 +1,11 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en" data-theme="dark">
 <head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- ✅ Updated Meta Description for SEO -->
-  <meta name="description" content="Portfolio of Abdullah Mohammed Zafar – Cloud, Linux & Infrastructure Engineer | Integrations & Endpoint Support. Explore projects, certifications, and professional profiles.">
-  <title>Abdullah M. Zafar | Cloud & Infrastructure Engineer</title>
-  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abdullah M. Zafar — Links</title>
+  <meta name="description" content="All professional links for Abdullah M. Zafar — IT Specialist | Cloud & Linux | Integrations. GitHub, LinkedIn, Credly, Google Cloud, Docker, Microsoft Learn, Replit, Coursera, and more." />
+
   <!-- Open Graph / Social -->
   <meta property="og:title" content="Abdullah M. Zafar — Links" />
   <meta property="og:description" content="IT Specialist | Cloud & Linux | Integrations — all my professional links in one place." />
@@ -61,7 +59,7 @@
     --button-bg-hover: #2563eb;
   }
 
-  /* [data-theme="light"] {
+  [data-theme="light"] {
     --bg: #f6f7fb;
     --card: #ffffff;
     --text: #0b1025;
@@ -73,22 +71,7 @@
     --shadow: 0 10px 28px rgba(2, 8, 20, 0.08);
     --button-bg: var(--accent);
     --button-bg-hover: #005bb5;
-  } */
-
-  [data-theme="light"] {
-    --bg: #fdfaf6;         /* creamy white */
-    --card: #ffffff;
-    --text: #1e293b;       /* dark blue body text */
-    --muted: #334155;      /* softer subtitle color */
-    --accent: #1E3A8A;     /* dark-blue accent for titles & icons */
-    --accent-2: #3B82F6;
-    --border: rgba(0,0,0,0.08);
-    --link-bg: #f8f5f0;    /* off-white link cards */
-    --shadow: 0 10px 28px rgba(2, 8, 20, 0.08);
-    --button-bg: var(--accent);
-    --button-bg-hover: #005bb5;
   }
-
 
   * { box-sizing: border-box; }
   html, body { height: 100%; }
@@ -200,7 +183,7 @@
     margin-top: 14px;
   }
 
-  /* .actions-grid .btn-mini {
+  .actions-grid .btn-mini {
     border: 1px solid var(--border);
     background: var(--link-bg);
     color: var(--text);
@@ -215,28 +198,7 @@
     min-width: 100px;
     text-align: center;
     transition: background 0.2s ease-in-out, transform 0.1s ease-in-out;
-  } */
-
-    .actions-grid .btn-mini {
-    border: 1px solid var(--border);
-    background: var(--link-bg);
-    color: var(--text);
-    /* keep spacing similar on desktop, but fix height for consistency */
-    padding: 0 12px;
-    font-size: 13px;
-    border-radius: 999px;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    min-width: 100px;
-    text-align: center;
-    transition: background 0.2s ease-in-out, transform 0.1s ease-in-out;
-    height: 44px;           /* <-- fixed height for consistent rows */
-    box-sizing: border-box; /* ensure padding doesn't add height unexpectedly */
   }
-
 
   .actions-grid .btn-mini:hover {
     filter: brightness(1.05);
@@ -272,25 +234,16 @@
     box-shadow: var(--shadow);
   }
 
-      /* Link icon styles */
   .link-icon {
     width: 40px;
     height: 40px;
     border-radius: 10px;
     display: grid;
     place-items: center;
-    color: white;           /* default = white for dark theme */
+    color: white;
     flex: 0 0 auto;
     font-size: 18px;
   }
-  
-  /* Override for light theme: make icons blue so they are visible */
-  [data-theme="light"] .link-icon,
-  [data-theme="light"] .link-icon i {
-    color: var(--accent);   /* use accent blue for visibility */
-    filter: none;           /* remove any inverted/brightness filters */
-  }
-
 
   .link-content { display: grid; gap: 4px; }
   .link-title { font-weight: 600; font-size: 15.5px; }
@@ -305,16 +258,9 @@
 
   /* .divider { margin: 18px 0 8px; height: 1px; background: var(--border); border-radius: 1px; } */
 
-  /* @media (max-width: 620px) {
-    header { grid-template-columns: 72px 1fr; }
-    .actions { grid-column: 1 / -1; justify-items: start; }
-    .avatar { width: 72px; height: 72px; font-size: 24px; }
-  } */
-
   @media (max-width: 620px) {
     header { grid-template-columns: 72px 1fr; }
-    /* make actions grid 2 columns on small screens */
-    .actions-grid { grid-column: 1 / -1; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .actions { grid-column: 1 / -1; justify-items: start; }
     .avatar { width: 72px; height: 72px; font-size: 24px; }
   }
 
@@ -435,7 +381,7 @@
     </section>
   </main>
 
-  <!-- <script>
+  <script>
     (function () {
       const root = document.documentElement;
       const saved = localStorage.getItem('theme');
@@ -449,46 +395,6 @@
       });
     })();
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script> --> 
-
-<script>
-  (function () {
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
-
-    // Apply saved theme if present
-    if (saved) root.setAttribute('data-theme', saved);
-
-    // Function: set avatar image according to theme
-    function setAvatarForTheme(theme) {
-      const avatarImg = document.querySelector('.avatar img');
-      if (!avatarImg) return;
-      if (theme === 'light') {
-        // file you will add for light theme (upload BlueCircuitHandshakeWCuff.png)
-        avatarImg.src = 'BlueCircuitHandshakeWCuff.png';
-      } else {
-        avatarImg.src = 'WhiteCircuitHandshakeWCuff.png';
-      }
-    }
-
-    // Set initial avatar according to saved or default theme
-    setAvatarForTheme(root.getAttribute('data-theme') || 'dark');
-
-    // Theme toggle button
-    const btn = document.getElementById('themeToggle');
-    btn.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      root.setAttribute('data-theme', current);
-      localStorage.setItem('theme', current);
-      // update avatar immediately after switching theme
-      setAvatarForTheme(current);
-    });
-  })();
-
-  // set copyright year
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
-  
+  </script>
 </body>
 </html>
