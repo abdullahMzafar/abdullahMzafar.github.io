@@ -277,6 +277,10 @@
     display: grid;
     place-items: center;
     color: white;
+    [data-theme="light"] .link-icon,
+    [data-theme="light"] .link-icon i {
+    color: var(--accent);     /* blue icons for light theme */
+    filter: none;             /* remove any invert/brightness that might affect color */
     flex: 0 0 auto;
     font-size: 18px;
   }
