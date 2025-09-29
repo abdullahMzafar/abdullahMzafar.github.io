@@ -294,9 +294,16 @@
 
   /* .divider { margin: 18px 0 8px; height: 1px; background: var(--border); border-radius: 1px; } */
 
-  @media (max-width: 620px) {
+  /* @media (max-width: 620px) {
     header { grid-template-columns: 72px 1fr; }
     .actions { grid-column: 1 / -1; justify-items: start; }
+    .avatar { width: 72px; height: 72px; font-size: 24px; }
+  } */
+
+    @media (max-width: 620px) {
+    header { grid-template-columns: 72px 1fr; }
+    /* make actions grid 2 columns on small screens */
+    .actions-grid { grid-column: 1 / -1; grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .avatar { width: 72px; height: 72px; font-size: 24px; }
   }
 
