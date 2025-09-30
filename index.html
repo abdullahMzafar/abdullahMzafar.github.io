@@ -326,18 +326,18 @@
     .avatar { width: 72px; height: 72px; font-size: 24px; }
   }
 
-  /* Desktop/web view adjustments */
+    /* Desktop/web view adjustments */
   @media (min-width: 768px) {
     .profile-header {
-      display: flex;                /* use flexbox for alignment */
-      flex-direction: column;       /* stack avatar, name, subtitle vertically */
+      display: flex !important;     /* override grid */
+      flex-direction: column;       /* stack avatar, name, subtitles */
       align-items: center;          /* center horizontally */
       text-align: center;           /* center text */
-      gap: 14px;                    /* space between avatar and text */
+      gap: 14px;                    /* space between items */
     }
   
     .avatar {
-      margin-bottom: 8px;           /* little breathing space */
+      margin-bottom: 10px;          /* space below avatar */
     }
   
     .title h1 {
@@ -345,10 +345,12 @@
     }
   
     .subtitle {
-      font-size: 16px;              /* slightly larger subtitles */
-      line-height: 1.6;             /* good spacing */
+      font-size: 18px;              /* increase subtitle size */
+      line-height: 1.6;             /* better line spacing */
+      margin: 4px 0;                /* small vertical gap */
     }
   }
+
 
 
   /* Updated Button Grid for Theme, Email, Resume, Skillset */
