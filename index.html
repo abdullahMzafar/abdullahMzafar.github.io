@@ -184,7 +184,7 @@
   }
     */
 
-  .title h1 { margin: 0 0 6px; font-size: 26px; line-height: 1.2; }
+  .title h1 { margin: 0 0 6px; font-size: 32px; line-height: 1.5; }
   /* .subtitle {
     margin: 2px 0;
     color: var(--muted);
@@ -192,10 +192,10 @@
   } */
 
   .subtitle {
-  font-size: 14.5px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.6;       /* increases vertical spacing between lines */
-  margin-bottom: 6px;     /* adds extra gap between multiple subtitles */
+  margin-bottom: 1.0px;     /* adds extra gap between multiple subtitles */
   }
 
   .title p { margin: 0; color: var(--muted); font-size: 14.5px; }
@@ -325,32 +325,6 @@
     .actions-grid { grid-column: 1 / -1; grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .avatar { width: 72px; height: 72px; font-size: 24px; }
   }
-
-      /* Desktop/web view adjustments */
-  @media (min-width: 768px) {
-    .profile-header {
-      display: flex !important;          /* force override grid */
-      flex-direction: column !important; /* stack items vertically */
-      align-items: center !important;    /* center horizontally */
-      text-align: center !important;     /* center text */
-      gap: 14px !important;
-    }
-  
-    .avatar {
-      margin-bottom: 12px !important;
-    }
-  
-    .title h1 {
-      font-size: 34px !important;  /* bigger name */
-    }
-  
-    .subtitle {
-      font-size: 18px !important;  /* bigger subtitle */
-      line-height: 1.6 !important; /* extra spacing */
-      margin: 6px 0 !important;
-    }
-  }
-
 
 
   /* Updated Button Grid for Theme, Email, Resume, Skillset */
