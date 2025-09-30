@@ -326,28 +326,28 @@
     .avatar { width: 72px; height: 72px; font-size: 24px; }
   }
 
-    /* Desktop/web view adjustments */
+      /* Desktop/web view adjustments */
   @media (min-width: 768px) {
     .profile-header {
-      display: flex !important;     /* override grid */
-      flex-direction: column;       /* stack avatar, name, subtitles */
-      align-items: center;          /* center horizontally */
-      text-align: center;           /* center text */
-      gap: 14px;                    /* space between items */
+      display: flex !important;          /* force override grid */
+      flex-direction: column !important; /* stack items vertically */
+      align-items: center !important;    /* center horizontally */
+      text-align: center !important;     /* center text */
+      gap: 14px !important;
     }
   
     .avatar {
-      margin-bottom: 10px;          /* space below avatar */
+      margin-bottom: 12px !important;
     }
   
     .title h1 {
-      font-size: 34px;              /* bigger name */
+      font-size: 34px !important;  /* bigger name */
     }
   
     .subtitle {
-      font-size: 18px;              /* increase subtitle size */
-      line-height: 1.6;             /* better line spacing */
-      margin: 4px 0;                /* small vertical gap */
+      font-size: 18px !important;  /* bigger subtitle */
+      line-height: 1.6 !important; /* extra spacing */
+      margin: 6px 0 !important;
     }
   }
 
