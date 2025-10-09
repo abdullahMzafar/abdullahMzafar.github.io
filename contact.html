@@ -1,25 +1,157 @@
-<!-- contact.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Abdullah M. Zafar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --bg: #0f1220;
+      --card: #171a2b;
+      --text: #e7e9ee;
+      --muted: #a9afc3;
+      --accent: #3ea6ff;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --radius: 14px;
+    }
+
+    [data-theme="light"] {
+      --bg: #f9f8f4;
+      --card: #ffffff;
+      --text: #0b1025;
+      --muted: #4a5568;
+      --accent: #2563eb;
+      --border: rgba(0,0,0,0.1);
+      --shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: 22px;
+      padding: 40px 32px;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 18px;
+      color: var(--accent);
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-size: 14.5px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    label {
+      text-align: left;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    input, textarea {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 14px;
+      color: var(--text);
+      resize: none;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 6px var(--accent);
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      padding: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      filter: brightness(1.1);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
+<script>
+  (function () {
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if (saved) root.setAttribute('data-theme', saved);
+  })();
+</script>
+
+
 <body>
-  <main class="wrap">
-    <section class="card">
-      <h1>Contact Me</h1>
-      <form action="https://formspree.io/f/xqaydjob" method="POST" class="contact-form">
-        <label>Your Name</label>
-        <input type="text" name="name" required>
-        <label>Your Email</label>
-        <input type="email" name="_replyto" required>
-        <label>Your Message</label>
-        <textarea name="message" rows="5" required></textarea>
-        <button type="submit" class="btn-mini">Send</button>
-      </form>
-    </section>
-  </main>
+  <section class="card">
+    <h1><i class="fa-solid fa-envelope"></i> Contact Me</h1>
+    <p>Have a question or opportunity? Send me a message directly here.</p>
+
+    <form action="https://formspree.io/f/xqaydjob" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" name="_replyto" id="email" required>
+
+      <label for="message">Your Message</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+
+      <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+    </form>
+
+    <a href="index.html" class="back-link">
+      <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+    </a>
+  </section>
 </body>
 </html>
