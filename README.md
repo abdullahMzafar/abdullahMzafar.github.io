@@ -80,26 +80,28 @@ This landing page is:
 
 ## 🛠 How to Use
 1. Fork the repository
+   ```bash
    Visit repository's page on a hosting service (e.g., GitHub) and click the "Fork" button.
 
-2. Clone the fork
+3. Clone the fork
    ```bash
     git clone https://github.com/<your-username>/<repo-name>.git
 
-3. Create a new branch
+4. Create a new branch
    ```bash
    git checkout -b <branch-name>
 
-4. Make changes and commit
+5. Make changes and commit
    ```bash
    git add .
    git commit -m "adding new feature"
 
-5. Push new branch
+6. Push new branch
    ```bash
    git push origin <branch-name>
 
-6. Create a pull request
+7. Create a pull request
+   ```bash
    Go to the original repository on the hosting service and submit a pull request from new branch. 
 
 ---
