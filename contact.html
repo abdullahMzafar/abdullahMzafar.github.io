@@ -156,6 +156,9 @@
       justify-content: center;
     }
 
+    /* No “card” around reCAPTCHA; keep it visually invisible */
+    #recaptcha { background: transparent; padding: 0; border: 0; }
+
   </style>
 </head>
 
@@ -191,7 +194,12 @@
       <textarea name="message" id="message" rows="5" required></textarea>
       
       <!-- reCAPTCHA widget -->
-      <div id="recaptcha-container"></div>
+      <div id="recaptcha" class="g-recaptcha"
+       data-sitekey="6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z"
+       data-size="invisible"
+       data-callback="onRecaptchaSuccess"
+       data-badge="bottomleft">
+      </div>
 
       <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
     </form>
@@ -201,55 +209,31 @@
     </a>
   </section>
 
-  <!-- Google reCAPTCHA script -->
-  <script src="https://www.google.com/recaptcha/api.js?onload=onLoadRecaptcha&render=explicit" async defer></script>
-  
+  <!-- Google reCAPTCHA API -->
   <script>
-    // Initial reCAPTCHA load
+    // Render the invisible widget and wire up form submit
     function onLoadRecaptcha() {
-      const theme = document.documentElement.getAttribute('data-theme') || 'dark';
-      renderRecaptcha(theme);
-    }
-  
-    // Render reCAPTCHA dynamically based on theme
-    function renderRecaptcha(theme) {
-      const container = document.getElementById('recaptcha-container');
-      if (!container) return;
-  
-      // Clear any existing reCAPTCHA instance
-      container.innerHTML = '';
-  
-      // Match background colors to your theme
-      const recaptchaTheme = theme === 'light' ? 'light' : 'dark';
-      const bgColor =
-        theme === 'light'
-          ? getComputedStyle(document.documentElement).getPropertyValue('--card') || '#f8f6f1'
-          : getComputedStyle(document.documentElement).getPropertyValue('--bg') || '#171a2b';
-  
-      // Apply inline styling to blend perfectly
-      Object.assign(container.style, {
-        background: bgColor.trim(),
-        borderRadius: '10px',
-        padding: '10px',
-        display: 'flex',
-        justifyContent: 'center',
-        transition: 'background 0.3s ease'
-      });
-  
-      // Render reCAPTCHA box
-      grecaptcha.render(container, {
+      const widgetId = grecaptcha.render('recaptcha', {
         sitekey: '6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z',
-        theme: recaptchaTheme
+        size: 'invisible',
+        callback: onRecaptchaSuccess,
+        badge: 'bottomleft' // 'bottomright' or 'inline' also valid
+      });
+  
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+  
+        // TODO: add your client-side validation here
+        // if (valid) -> execute reCAPTCHA
+        grecaptcha.execute(widgetId);
       });
     }
   
-    // Watch for theme changes and re-render accordingly
-    const observer = new MutationObserver(() => {
-      const newTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-      renderRecaptcha(newTheme);
-    });
-    observer.observe(document.documentElement, { attributes: true });
-  </script>
-
+    // Called when reCAPTCHA passes; Google injects g-recaptcha-response automatically
+    function onRecaptchaSuccess(token) {
+      document.getElementById('contact-form').submit();
+    }
+  </script>https://www.google.com/recaptcha/api.js?onload=onLoadRecaptcha&render=explicit</script>
 </body>
 </html>
