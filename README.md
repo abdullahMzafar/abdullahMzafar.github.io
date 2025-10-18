@@ -1,4 +1,4 @@
-# ![Favicon Logo](Favicon/favicon-32x32.png) Abdullah M. Zafar — Professional Links
+# ![Favicon Logo](Favicon/favicon-32x32.png) Abdullah M. Zafar — Scope of Expertise
 
 ![Focus](https://img.shields.io/badge/Focus-EA4335?style=for-the-badge&logo=target&logoColor=white)
 ![SaaS Deployment](https://img.shields.io/badge/SaaS-Deployment-1E3A8A?style=for-the-badge&logo=cloudsmith&logoColor=white) 
@@ -105,6 +105,8 @@ https://htmlpreview.github.io/?.
 Example: [https://htmlpreview.github.io/?https://github.com/<your-username>/<your-repo>/blob/feature-branch/index.html](https://htmlpreview.github.io/?https://github.com/abdullahMzafar/abdullahMzafar.github.io/blob/HTML-Preview/index.html)
 
 © Abdullah M. Zafar — All rights reserved.
+
+Professional Links
 
 Welcome to the repository for my **personal links landing page**:  
 🔗 **Live Page:** [abdullahmzafar.github.io](https://abdullahmzafar.github.io/)
