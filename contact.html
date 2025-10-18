@@ -187,8 +187,18 @@
 
   <!-- reCAPTCHA script -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  
+
   <script>
+    // Watch for theme change and update reCAPTCHA container
+    const observer = new MutationObserver(() => {
+      const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const widget = document.querySelector('.g-recaptcha');
+      if (widget) widget.setAttribute('data-theme', theme);
+    });
+    observer.observe(document.documentElement, { attributes: true });
+  </script>
+  
+  <!-- <script>
     // Automatically load reCAPTCHA matching the current theme
     function onLoadRecaptcha() {
       const theme = document.documentElement.getAttribute('data-theme') || 'dark';
@@ -217,7 +227,7 @@
     });
   
     observer.observe(document.documentElement, { attributes: true });
-  </script>
+  </script> -->
   
 </body>
 </html>
