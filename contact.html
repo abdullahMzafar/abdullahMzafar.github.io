@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5V8BZHS9');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Abdullah M. Zafar</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Standard Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+
+  <!-- Apple Touch Icon (for iOS devices) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+
+  <!-- Android/Chrome PWA Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="Favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="Favicon/android-chrome-512x512.png">
+
+  <!-- Fallback .ico for older browsers -->
+  <link rel="shortcut icon" href="Favicon/favicon.ico">
+
+  
   <style>
     :root {
       --bg: #0f1220;
@@ -119,6 +149,32 @@
     .back-link:hover {
       text-decoration: underline;
     }
+
+    #recaptcha { 
+      background: transparent;
+      padding: 0;
+      border: 0;
+    }
+
+    /* reCAPTCHA container centered and smooth fade-in */
+    #recaptcha-container {
+      display: flex;
+      justify-content: center;
+      margin: 1.2rem 0;
+      transition: opacity 0.4s ease;
+    }
+    #recaptcha-container.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Light/dark blending via iframe filtering */
+    [data-theme="light"] #recaptcha-container iframe {
+      filter: brightness(1.05) contrast(1.03);
+    }
+    [data-theme="dark"] #recaptcha-container iframe {
+      filter: brightness(0.85) contrast(0.8);
+    }
   </style>
 </head>
 
@@ -132,6 +188,13 @@
 
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V8BZHS9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
   <section class="card">
     <h1><i class="fa-solid fa-envelope"></i> Contact Me</h1>
     <p>Have a question or opportunity? Send me a message directly here.</p>
@@ -145,13 +208,50 @@
 
       <label for="message">Your Message</label>
       <textarea name="message" id="message" rows="5" required></textarea>
+      
+      <div id="recaptcha-container" class="hidden">
+        <div id="recaptcha-widget"></div>
+      </div>
 
       <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
     </form>
-
-    <a href="index.html" class="back-link">
-      <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+    <a href="/" class="back-link">
+    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
     </a>
   </section>
+
+  <!-- Load reCAPTCHA API -->
+  <script src="https://www.google.com/recaptcha/api.js?onload=onLoadRecaptcha&render=explicit" async defer></script>
+
+  <script>
+    let recaptchaWidgetId = null;
+
+    // Initialize the reCAPTCHA when the API loads
+    function onLoadRecaptcha() {
+      const container = document.getElementById('recaptcha-widget');
+      const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+      recaptchaWidgetId = grecaptcha.render(container, {
+        sitekey: '6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z',  // ✅ replace with your own visible v2 key
+        theme: theme
+      });
+      document.getElementById('recaptcha-container').classList.remove('hidden');
+    }
+
+    // Watch for theme changes (light/dark toggle)
+    const observer = new MutationObserver(() => {
+      const newTheme = document.documentElement.getAttribute('data-theme');
+      if (recaptchaWidgetId !== null) {
+        const container = document.getElementById('recaptcha-widget');
+        container.innerHTML = '';
+        recaptchaWidgetId = grecaptcha.render(container, {
+          sitekey: '6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z',
+          theme: newTheme
+        });
+      }
+    });
+
+    observer.observe(document.documentElement, { attributes: true });
+  </script>
+
 </body>
 </html>
