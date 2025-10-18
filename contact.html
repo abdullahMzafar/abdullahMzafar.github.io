@@ -162,19 +162,55 @@
 
       <label for="message">Your Message</label>
       <textarea name="message" id="message" rows="5" required></textarea>
-
+      
       <!-- reCAPTCHA widget -->
-      <div class="g-recaptcha" data-sitekey="6LcjTO4rAAAAAO_nBVJpuNSSP319l269oVmNaGIA"></div>
+      <div id="recaptcha-container">
+        <div class="g-recaptcha" 
+             data-sitekey="6LcjTO4rAAAAAO_nBVJpuNSSP319l269oVmNaGIA"
+             data-theme="dark"></div>
+      </div>
 
       <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
     </form>
-
-    <!-- reCAPTCHA script -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <a href="index.html" class="back-link">
       <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
     </a>
   </section>
+
+  <!-- reCAPTCHA script -->
+  <script src="https://www.google.com/recaptcha/api.js?onload=onLoadRecaptcha&render=explicit" async defer></script>
+  
+  <script>
+    // Automatically load reCAPTCHA matching the current theme
+    function onLoadRecaptcha() {
+      const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+      renderRecaptcha(theme);
+    }
+  
+    function renderRecaptcha(theme) {
+      // Clear any previously rendered reCAPTCHA
+      const container = document.getElementById('recaptcha-container');
+      container.innerHTML = '';
+      
+      grecaptcha.render(container, {
+        'sitekey': '6LcjTO4rAAAAAO_nBVJpuNSSP319l269oVmNaGIA',
+        'theme': theme
+      });
+    }
+  
+    // Observe theme toggle changes dynamically
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'data-theme') {
+          const newTheme = document.documentElement.getAttribute('data-theme');
+          renderRecaptcha(newTheme);
+        }
+      });
+    });
+  
+    observer.observe(document.documentElement, { attributes: true });
+  </script>
+  
 </body>
 </html>
