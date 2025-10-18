@@ -163,8 +163,14 @@
       <label for="message">Your Message</label>
       <textarea name="message" id="message" rows="5" required></textarea>
 
+      <!-- reCAPTCHA widget -->
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+
       <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
     </form>
+
+    <!-- reCAPTCHA script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <a href="index.html" class="back-link">
       <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
