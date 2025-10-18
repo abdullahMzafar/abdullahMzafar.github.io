@@ -251,6 +251,15 @@
     });
 
     observer.observe(document.documentElement, { attributes: true });
+
+    document.querySelector('form').addEventListener('submit', function (e) {
+      const response = grecaptcha.getResponse();
+      if (!response.length) {
+        e.preventDefault();
+        alert('⚠️ Please verify you’re not a robot before submitting.');
+      }
+    });
+
   </script>
 
 </body>
