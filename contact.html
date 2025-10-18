@@ -149,7 +149,7 @@
     .back-link:hover {
       text-decoration: underline;
     }
-    
+
     #recaptcha { 
       background: transparent;
       padding: 0;
@@ -159,16 +159,25 @@
     .recaptcha-wrapper {
       display: flex;
       justify-content: center;
-      margin: 1.5rem 0;
-    }
-    /* Dark/light theme blending */
-    [data-theme="dark"] .g-recaptcha iframe {
-      filter: brightness(0.9);
-    }
-    [data-theme="light"] .g-recaptcha iframe {
-      filter: brightness(1.05);
+      margin: 1.2rem 0;
+      transition: opacity 0.3s ease;
     }
 
+    .recaptcha-wrapper.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Blend with light and dark backgrounds */
+    [data-theme="light"] .recaptcha-wrapper iframe {
+      filter: brightness(1.03) contrast(1.02);
+      border-radius: 8px;
+    }
+
+    [data-theme="dark"] .recaptcha-wrapper iframe {
+      filter: brightness(0.9) contrast(0.95);
+      border-radius: 8px;
+    }
   </style>
 </head>
 
@@ -203,11 +212,8 @@
       <label for="message">Your Message</label>
       <textarea name="message" id="message" rows="5" required></textarea>
       
-      <div id="recaptcha-container" class="recaptcha-wrapper">
-        <div class="g-recaptcha" 
-         data-sitekey="6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z"
-         data-theme="dark">
-        </div>
+      <div id="recaptcha-container" class="recaptcha-wrapper hidden">
+        <div id="recaptcha-widget"></div>
       </div>
 
       <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
@@ -218,39 +224,39 @@
   </section>
 
   <!-- Load reCAPTCHA -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onLoadRecaptcha&render=explicit" async defer></script>
 
-  <!-- Theme Auto Switch -->
   <script>
-    // Automatically update reCAPTCHA theme based on current mode
-    const updateRecaptchaTheme = () => {
-      const theme = document.documentElement.getAttribute('data-theme') || 'dark';
-      const widget = document.querySelector('.g-recaptcha');
-      if (widget) {
-        widget.setAttribute('data-theme', theme);
-        // Force a full re-render to update style instantly
-        const container = document.getElementById('recaptcha-container');
-        const siteKey = widget.getAttribute('data-sitekey');
-        container.innerHTML = '';
-        grecaptcha.render(container, { 'sitekey': siteKey, 'theme': theme });
-      }
-    };
+    // Initialize reCAPTCHA only once and match current theme
+    let recaptchaWidgetId = null;
 
-    // Re-render reCAPTCHA when theme changes
+    function onLoadRecaptcha() {
+      const container = document.getElementById('recaptcha-widget');
+      const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+      recaptchaWidgetId = grecaptcha.render(container, {
+        sitekey: '6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z',
+        theme: theme
+      });
+      document.querySelector('.recaptcha-wrapper').classList.remove('hidden');
+    }
+
+    // Watch for theme changes dynamically and re-render
     const observer = new MutationObserver(mutations => {
       for (const mutation of mutations) {
-        if (mutation.attributeName === 'data-theme') {
-          updateRecaptchaTheme();
+        if (mutation.attributeName === 'data-theme' && recaptchaWidgetId !== null) {
+          const newTheme = document.documentElement.getAttribute('data-theme');
+          const container = document.getElementById('recaptcha-widget');
+          container.innerHTML = '';
+          recaptchaWidgetId = grecaptcha.render(container, {
+            sitekey: '6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z',
+            theme: newTheme
+          });
         }
       }
     });
 
     observer.observe(document.documentElement, { attributes: true });
 
-    // Wait until reCAPTCHA API loads
-    window.onload = () => {
-      if (typeof grecaptcha !== 'undefined') updateRecaptchaTheme();
-    };
   </script>
 
 </body>
