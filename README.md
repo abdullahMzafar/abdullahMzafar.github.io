@@ -1,4 +1,4 @@
-# <a href="https://abdullahmzafar.github.io" target="_blank"> <img src="Favicon/favicon-32x32.png" alt="Portfolio" width="64" height="64"> </a> Abdullah M. Zafar — Professional Links
+# <a href="https://abdullahmzafar.github.io" target="_blank"> <img src="Favicon/favicon-32x32.png" alt="Portfolio" width="30" height="30"> </a> Abdullah M. Zafar — Professional Links
 
 Welcome to the repository for my **personal links landing page**:  
 🔗 **Live Page:** [abdullahmzafar.github.io](https://abdullahmzafar.github.io/)
