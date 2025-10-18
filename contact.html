@@ -156,8 +156,36 @@
       justify-content: center;
     }
 
-    /* No “card” around reCAPTCHA; keep it visually invisible */
-    #recaptcha { background: transparent; padding: 0; border: 0; }
+    .form-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers badge (inline) and button */
+    gap: 12px;           /* space between badge and button */
+    margin-top: 8px;
+    text-align: center;
+  }
+
+    #recaptcha { 
+      background: transparent;
+      padding: 0;
+      border: 0;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .7rem 1.1rem;
+      border: 0;
+      border-radius: 8px;
+      background: var(--accent, #2563eb); /* same as your theme blue */
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+    .btn-primary:hover { background: #1e4fd6; }
+    .btn-primary i { line-height: 1; }
 
   </style>
 </head>
@@ -193,48 +221,51 @@
       <label for="message">Your Message</label>
       <textarea name="message" id="message" rows="5" required></textarea>
       
-      <!-- reCAPTCHA widget -->
-      <div id="recaptcha" class="g-recaptcha"
-       data-sitekey="6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z"
-       data-size="invisible"
-       data-callback="onRecaptchaSuccess"
-       data-badge="bottomleft">
+      <!-- Actions: Invisible reCAPTCHA + Submit button -->
+      <div class="form-actions">
+        <!-- Invisible reCAPTCHA -->
+        <div id="recaptcha"
+            class="g-recaptcha"
+            data-sitekey="6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z"
+            data-size="invisible"
+            data-callback="onRecaptchaSuccess"
+            data-badge="inline"></div>
+
+        <button type="submit" id="send-btn" class="btn-primary">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
       </div>
-
-      <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+      <a href="/" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+      </a>
     </form>
-
-    <a href="/" class="back-link">
-      <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
-    </a>
   </section>
 
-  <!-- Google reCAPTCHA API -->
+  <!-- reCAPTCHA API -->
+  <script src="https://www.google.com/recaptcha/api.js?onload=onLoadRecaptcha&render=explicit" async defer></script>
+
   <script>
-    // Render the invisible widget and wire up form submit
+    // Initialize invisible reCAPTCHA and bind to form
     function onLoadRecaptcha() {
       const widgetId = grecaptcha.render('recaptcha', {
         sitekey: '6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z',
         size: 'invisible',
         callback: onRecaptchaSuccess,
-        badge: 'bottomleft' // 'bottomright' or 'inline' also valid
+        badge: 'inline'
       });
-  
+
       const form = document.getElementById('contact-form');
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-  
-        // TODO: add your client-side validation here
-        // if (valid) -> execute reCAPTCHA
-        grecaptcha.execute(widgetId);
+        grecaptcha.execute(widgetId); // run invisible captcha
       });
     }
-  
-    // Called when reCAPTCHA passes; Google injects g-recaptcha-response automatically
+
+    // When captcha passes, submit the form
     function onRecaptchaSuccess(token) {
       document.getElementById('contact-form').submit();
     }
   </script>
-  <script https://www.google.com/recaptcha/api.js?onload=onLoadRecaptcha&render=explicit</script>
+
 </body>
 </html>
