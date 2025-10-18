@@ -1,5 +1,4 @@
-# 🌐 ![Favicon Logo](Favicon/favicon-32x32.png)
- Abdullah M. Zafar — Professional Links
+# 🌐 ![Favicon Logo](Favicon/favicon-32x32.png) Abdullah M. Zafar — Professional Links
 
 Welcome to the repository for my **personal links landing page**:  
 🔗 **Live Page:** [abdullahmzafar.github.io](https://abdullahmzafar.github.io/)
