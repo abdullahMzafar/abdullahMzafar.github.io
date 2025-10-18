@@ -81,7 +81,7 @@ This landing page is:
 ## 🛠 How to Use
 1. Fork the repository
    ```bash
-   Visit repository/'s page on a hosting service (e.g., GitHub) and click the "Fork" button.
+   Visit repository page on a hosting service (e.g., GitHub) and click the "Fork" button.
 
 3. Clone the fork
    ```bash
