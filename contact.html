@@ -156,27 +156,24 @@
       border: 0;
     }
 
-    .recaptcha-wrapper {
+    /* reCAPTCHA container centered and smooth fade-in */
+    #recaptcha-container {
       display: flex;
       justify-content: center;
       margin: 1.2rem 0;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.4s ease;
     }
-
-    .recaptcha-wrapper.hidden {
+    #recaptcha-container.hidden {
       opacity: 0;
       pointer-events: none;
     }
 
-    /* Blend with light and dark backgrounds */
-    [data-theme="light"] .recaptcha-wrapper iframe {
-      filter: brightness(1.03) contrast(1.02);
-      border-radius: 8px;
+    /* Light/dark blending via iframe filtering */
+    [data-theme="light"] #recaptcha-container iframe {
+      filter: brightness(1.05) contrast(1.03);
     }
-
-    [data-theme="dark"] .recaptcha-wrapper iframe {
-      filter: brightness(0.8) contrast(0.6);
-      border-radius: 8px;
+    [data-theme="dark"] #recaptcha-container iframe {
+      filter: brightness(0.85) contrast(0.8);
     }
   </style>
 </head>
@@ -212,7 +209,7 @@
       <label for="message">Your Message</label>
       <textarea name="message" id="message" rows="5" required></textarea>
       
-      <div id="recaptcha-container" class="recaptcha-wrapper hidden">
+      <div id="recaptcha-container" class="hidden">
         <div id="recaptcha-widget"></div>
       </div>
 
@@ -223,40 +220,37 @@
     </a>
   </section>
 
-  <!-- Load reCAPTCHA -->
+  <!-- Load reCAPTCHA API -->
   <script src="https://www.google.com/recaptcha/api.js?onload=onLoadRecaptcha&render=explicit" async defer></script>
 
   <script>
-    // Initialize reCAPTCHA only once and match current theme
     let recaptchaWidgetId = null;
 
+    // Initialize the reCAPTCHA when the API loads
     function onLoadRecaptcha() {
       const container = document.getElementById('recaptcha-widget');
       const theme = document.documentElement.getAttribute('data-theme') || 'dark';
       recaptchaWidgetId = grecaptcha.render(container, {
-        sitekey: '6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z',
+        sitekey: '6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z',  // ✅ replace with your own visible v2 key
         theme: theme
       });
-      document.querySelector('.recaptcha-wrapper').classList.remove('hidden');
+      document.getElementById('recaptcha-container').classList.remove('hidden');
     }
 
-    // Watch for theme changes dynamically and re-render
-    const observer = new MutationObserver(mutations => {
-      for (const mutation of mutations) {
-        if (mutation.attributeName === 'data-theme' && recaptchaWidgetId !== null) {
-          const newTheme = document.documentElement.getAttribute('data-theme');
-          const container = document.getElementById('recaptcha-widget');
-          container.innerHTML = '';
-          recaptchaWidgetId = grecaptcha.render(container, {
-            sitekey: '6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z',
-            theme: newTheme
-          });
-        }
+    // Watch for theme changes (light/dark toggle)
+    const observer = new MutationObserver(() => {
+      const newTheme = document.documentElement.getAttribute('data-theme');
+      if (recaptchaWidgetId !== null) {
+        const container = document.getElementById('recaptcha-widget');
+        container.innerHTML = '';
+        recaptchaWidgetId = grecaptcha.render(container, {
+          sitekey: '6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z',
+          theme: newTheme
+        });
       }
     });
 
     observer.observe(document.documentElement, { attributes: true });
-
   </script>
 
 </body>
