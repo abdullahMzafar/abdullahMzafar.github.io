@@ -207,47 +207,42 @@
 
   <!-- reCAPTCHA script -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-  <script>
-    // Watch for theme change and update reCAPTCHA container
-    const observer = new MutationObserver(() => {
-      const theme = document.documentElement.getAttribute('data-theme') || 'dark';
-      const widget = document.querySelector('.g-recaptcha');
-      if (widget) widget.setAttribute('data-theme', theme);
-    });
-    observer.observe(document.documentElement, { attributes: true });
-  </script>
   
-  <!-- <script>
-    // Automatically load reCAPTCHA matching the current theme
+  <script>
+    // Dynamically render reCAPTCHA with theme-aware blending
     function onLoadRecaptcha() {
       const theme = document.documentElement.getAttribute('data-theme') || 'dark';
       renderRecaptcha(theme);
     }
   
     function renderRecaptcha(theme) {
-      // Clear any previously rendered reCAPTCHA
       const container = document.getElementById('recaptcha-container');
+      if (!container) return;
+  
+      // Clear old widget if re-rendering
       container.innerHTML = '';
-      
+  
+      // Smoothly blend the box with your page background
+      const bgColor = theme === 'light' ? '#f7f3ef' : '#171a2b'; // creamy or dark card color
+      container.style.background = bgColor;
+      container.style.borderRadius = '10px';
+      container.style.padding = '6px';
+      container.style.display = 'inline-block';
+  
       grecaptcha.render(container, {
         'sitekey': '6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z',
         'theme': theme
       });
     }
   
-    // Observe theme toggle changes dynamically
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.attributeName === 'data-theme') {
-          const newTheme = document.documentElement.getAttribute('data-theme');
-          renderRecaptcha(newTheme);
-        }
-      });
+    // Watch for theme toggle
+    const observer = new MutationObserver(() => {
+      const newTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      renderRecaptcha(newTheme);
     });
   
     observer.observe(document.documentElement, { attributes: true });
-  </script> -->
+  </script>
   
 </body>
 </html>
