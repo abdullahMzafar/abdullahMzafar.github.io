@@ -149,43 +149,25 @@
     .back-link:hover {
       text-decoration: underline;
     }
-
-    #recaptcha-container {
-      margin: 20px 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .form-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* centers badge (inline) and button */
-    gap: 12px;           /* space between badge and button */
-    margin-top: 8px;
-    text-align: center;
-  }
-
+    
     #recaptcha { 
       background: transparent;
       padding: 0;
       border: 0;
     }
 
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      padding: .7rem 1.1rem;
-      border: 0;
-      border-radius: 8px;
-      background: var(--accent, #2563eb); /* same as your theme blue */
-      color: #fff;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background 0.2s ease;
+    .recaptcha-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 1.5rem 0;
     }
-    .btn-primary:hover { background: #1e4fd6; }
-    .btn-primary i { line-height: 1; }
+    /* Dark/light theme blending */
+    [data-theme="dark"] .g-recaptcha iframe {
+      filter: brightness(0.9);
+    }
+    [data-theme="light"] .g-recaptcha iframe {
+      filter: brightness(1.05);
+    }
 
   </style>
 </head>
@@ -221,50 +203,54 @@
       <label for="message">Your Message</label>
       <textarea name="message" id="message" rows="5" required></textarea>
       
-      <!-- Actions: Invisible reCAPTCHA + Submit button -->
-      <div class="form-actions">
-        <!-- Invisible reCAPTCHA -->
-        <div id="recaptcha"
-            class="g-recaptcha"
-            data-sitekey="6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z"
-            data-size="invisible"
-            data-callback="onRecaptchaSuccess"
-            data-badge="inline"></div>
-
-        <button type="submit" id="send-btn" class="btn-primary">
-          <i class="fa-solid fa-paper-plane"></i> Send Message
-        </button>
+      <div id="recaptcha-container" class="recaptcha-wrapper">
+        <div class="g-recaptcha" 
+         data-sitekey="6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z"
+         data-theme="dark">
+        </div>
       </div>
-      <a href="/" class="back-link">
-        <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
-      </a>
+
+      <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
     </form>
+    <a href="/" class="back-link">
+    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+    </a>
   </section>
 
-  <!-- reCAPTCHA API -->
-  <script src="https://www.google.com/recaptcha/api.js?onload=onLoadRecaptcha&render=explicit" async defer></script>
+  <!-- Load reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+  <!-- Theme Auto Switch -->
   <script>
-    // Initialize invisible reCAPTCHA and bind to form
-    function onLoadRecaptcha() {
-      const widgetId = grecaptcha.render('recaptcha', {
-        sitekey: '6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z',
-        size: 'invisible',
-        callback: onRecaptchaSuccess,
-        badge: 'inline'
-      });
+    // Automatically update reCAPTCHA theme based on current mode
+    const updateRecaptchaTheme = () => {
+      const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const widget = document.querySelector('.g-recaptcha');
+      if (widget) {
+        widget.setAttribute('data-theme', theme);
+        // Force a full re-render to update style instantly
+        const container = document.getElementById('recaptcha-container');
+        const siteKey = widget.getAttribute('data-sitekey');
+        container.innerHTML = '';
+        grecaptcha.render(container, { 'sitekey': siteKey, 'theme': theme });
+      }
+    };
 
-      const form = document.getElementById('contact-form');
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        grecaptcha.execute(widgetId); // run invisible captcha
-      });
-    }
+    // Re-render reCAPTCHA when theme changes
+    const observer = new MutationObserver(mutations => {
+      for (const mutation of mutations) {
+        if (mutation.attributeName === 'data-theme') {
+          updateRecaptchaTheme();
+        }
+      }
+    });
 
-    // When captcha passes, submit the form
-    function onRecaptchaSuccess(token) {
-      document.getElementById('contact-form').submit();
-    }
+    observer.observe(document.documentElement, { attributes: true });
+
+    // Wait until reCAPTCHA API loads
+    window.onload = () => {
+      if (typeof grecaptcha !== 'undefined') updateRecaptchaTheme();
+    };
   </script>
 
 </body>
