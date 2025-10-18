@@ -201,39 +201,49 @@
     </a>
   </section>
 
-  <!-- reCAPTCHA Script -->
+  <!-- Google reCAPTCHA script -->
   <script src="https://www.google.com/recaptcha/api.js?onload=onLoadRecaptcha&render=explicit" async defer></script>
   
   <script>
+    // Initial reCAPTCHA load
     function onLoadRecaptcha() {
       const theme = document.documentElement.getAttribute('data-theme') || 'dark';
       renderRecaptcha(theme);
     }
   
+    // Render reCAPTCHA dynamically based on theme
     function renderRecaptcha(theme) {
       const container = document.getElementById('recaptcha-container');
       if (!container) return;
   
-      // Clear previous reCAPTCHA
+      // Clear any existing reCAPTCHA instance
       container.innerHTML = '';
   
-      // Choose Google’s two supported v2 themes only
+      // Match background colors to your theme
       const recaptchaTheme = theme === 'light' ? 'light' : 'dark';
+      const bgColor =
+        theme === 'light'
+          ? getComputedStyle(document.documentElement).getPropertyValue('--card') || '#f8f6f1'
+          : getComputedStyle(document.documentElement).getPropertyValue('--bg') || '#171a2b';
   
-      // Match your site’s background more naturally
-      container.style.background = theme === 'light' ? '#f8f6f1' : '#171a2b';
-      container.style.borderRadius = '10px';
-      container.style.padding = '10px';
-      container.style.display = 'inline-block';
-      container.style.transition = 'background 0.3s ease';
+      // Apply inline styling to blend perfectly
+      Object.assign(container.style, {
+        background: bgColor.trim(),
+        borderRadius: '10px',
+        padding: '10px',
+        display: 'flex',
+        justifyContent: 'center',
+        transition: 'background 0.3s ease'
+      });
   
+      // Render reCAPTCHA box
       grecaptcha.render(container, {
         sitekey: '6LdfWO4rAAAAAGfHiczFudPmhmJlqf_Ryq8OiU1Z',
         theme: recaptchaTheme
       });
     }
   
-    // Observe for theme changes (trigger re-render)
+    // Watch for theme changes and re-render accordingly
     const observer = new MutationObserver(() => {
       const newTheme = document.documentElement.getAttribute('data-theme') || 'dark';
       renderRecaptcha(newTheme);
