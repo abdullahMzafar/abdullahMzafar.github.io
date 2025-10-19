@@ -292,14 +292,40 @@
     color: var(--muted);
     font-size: 12.8px;
   }
-
+  
+  /* Footer links: high contrast, consistent after click */
+  .footer a {
+    color: var(--link-color, #2A73CC);       /* your preferred blue */
+    text-decoration: underline;
+    text-underline-offset: 2px;              /* nicer underline spacing */
+  }
+  
+  /* Prevent different color for visited links */
+  .footer a:visited {
+    color: var(--link-color, #2A73CC);
+  }
+  
+  /* Optional: nicer hover/focus state */
+  .footer a:hover,
+  .footer a:focus-visible {
+    color: var(--link-hover-color, #6FA8FF); /* slightly brighter blue */
+    text-decoration-thickness: 2px;          /* subtle emphasis */
+    outline: none;                           /* avoid default focus outline */
+  }
+  
+  /* Keep the dot clean and un-underlined */
+  .footer .separator {
+    margin: 0 6px;           /* breathing room around the dot */
+    color: var(--muted);     /* matches footer text color */
+    text-decoration: none;   /* ensure no underline on the bullet */
+  }
+    
   @media (max-width: 620px) {
     header { grid-template-columns: 72px 1fr; }
     /* make actions grid 2 columns on small screens */
     .actions-grid { grid-column: 1 / -1; grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .avatar { width: 72px; height: 72px; font-size: 24px; }
   }
-
 
   /* Updated Button Grid for Theme, Email, Resume, Skillset */
   .button-grid {
@@ -420,7 +446,8 @@
         </a>
 
       <p class="footer">
-        © <span id="year"></span> Abdullah M. Zafar • 
+        © <span id="year"></span> Abdullah M. Zafar
+        <span class="separator"> • </span>
         <a href="https://abdullahMzafar.github.io" target="_blank" rel="noopener noreferrer">abdullahMzafar.github.io</a>
         <span class="separator"> • </span>
         <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
