@@ -83,7 +83,12 @@
 <body>
   <h1>Privacy Policy</h1>
 
-  <p>Last updated: <time datetime="2025-10-18">October 18, 2025</time></p>
+  <!-- <p>Last updated: <time datetime="2025-10-18">October 18, 2025</time></p> -->
+  <p>Last updated: <time id="last-updated"></time></p>
+  <script>
+    document.getElementById('last-updated').textContent =
+      new Date(document.lastModified).toLocaleDateString();
+  </script>
 
   <h2>Overview</h2>
   <p>This website is a personal portfolio hosted on GitHub Pages. We respect your privacy and aim to collect only what is necessary to understand site performance and protect our contact form from spam.</p>
