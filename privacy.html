@@ -1,10 +1,78 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+  <!-- Charset & viewport -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Referrer Policy (meta) -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <!-- Content Security Policy (via meta tag for GitHub Pages) -->
+  <!-- This CSP supports: self-hosted content + GTM/GA4 + reCAPTCHA v2 + data URIs for images -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.gstatic.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://region2.google-analytics.com; frame-src 'self' https://www.google.com; base-uri 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content">
+  
+  <!-- Google Consent Mode: default deny until user accepts -->
+  <script>
+    // Initialize dataLayer and default consent (no cookies until user accepts)
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied'
+      // Optional (Consent Mode v2 extra signals):
+      // 'ad_user_data': 'denied',
+      // 'ad_personalization': 'denied',
+      // 'functionality_storage': 'denied',
+      // 'security_storage': 'granted' // reCAPTCHA relies on security storage
+    });
+  </script>
+  
+<!-- Google Tag Manager (container) -->
+<!-- Loads immediately, but runs in limited/cookieless mode until consent updates -->
+
+  
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5V8BZHS9');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"> -->
+
+   <!-- Font Awesome with SRI -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+      integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B"
+      crossorigin="anonymous">
+
+  <!-- Standard Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+
+  <!-- Apple Touch Icon (for iOS devices) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+
+  <!-- Android/Chrome PWA Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="Favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="Favicon/android-chrome-512x512.png">
+
+  <!-- Fallback .ico for older browsers -->
+  <link rel="shortcut icon" href="Favicon/favicon.ico">
+
+  
   <meta charset="utf-8">
   <title>Privacy & Cookies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
+  
   <style>
     body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.6; margin: 32px; color: #0b2a4a; }
     a { color: #2A73CC; }
@@ -26,7 +94,7 @@
     <li><em>Before consent</em>: GA4 operates in a limited, cookieless mode (aggregated measurements with reduced granularity).</li>
     <li><em>After “Accept”</em>: GA4 uses cookies to provide full analytics.</li>
   </ul>
-  <p>No personally identifiable information is collected unless you voluntarily submit it via the contact form.</p>
+  <p>No personally identifiable information is collected unless you voluntarily submit it via the acceptance acknowledgement.</p>
   <p>For details, see Google’s policies: https://policies.google.com/privacyGoogle Privacy Policy</a> and https://policies.google.com/technologies/cookiesCookies</a>.</p>
 
   <h2>Contact Form & reCAPTCHA</h2>
