@@ -1,6 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
+  <!-- Charset & viewport -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Referrer Policy (meta) -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <!-- Content Security Policy (via meta tag for GitHub Pages) -->
+  <!-- This CSP supports: self-hosted content + GTM/GA4 + reCAPTCHA v2 + data URIs for images -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.gstatic.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://region2.google-analytics.com; frame-src 'self' https://www.google.com; base-uri 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content">
+  
+  <!-- Google Consent Mode: default deny until user accepts -->
+  <script>
+    // Initialize dataLayer and default consent (no cookies until user accepts)
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied'
+      // Optional (Consent Mode v2 extra signals):
+      // 'ad_user_data': 'denied',
+      // 'ad_personalization': 'denied',
+      // 'functionality_storage': 'denied',
+      // 'security_storage': 'granted' // reCAPTCHA relies on security storage
+    });
+  </script>
+  
+  <!-- Google Tag Manager (container) -->
+  <!-- Loads immediately, but runs in limited/cookieless mode until consent updates -->
+
+  
   <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
