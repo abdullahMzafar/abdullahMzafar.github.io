@@ -54,7 +54,13 @@
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"> -->
+  
+  <!-- Font Awesome with SRI -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+      integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B"
+      crossorigin="anonymous">
 
   <!-- Standard Favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
@@ -416,64 +422,129 @@
       <p class="footer">
         © <span id="year"></span> Abdullah M. Zafar • 
         <a href="https://abdullahMzafar.github.io" target="_blank" rel="noopener noreferrer">abdullahMzafar.github.io</a>
+        <span class="separator"> • </span>
+        <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
       </p>
     </section>
   </main>
 
-  <!-- <script>
+  <script>
     (function () {
       const root = document.documentElement;
       const saved = localStorage.getItem('theme');
+  
+      // Apply saved theme if present
       if (saved) root.setAttribute('data-theme', saved);
-
+  
+      // Function: set avatar image according to theme
+      function setAvatarForTheme(theme) {
+        const avatarImg = document.querySelector('.avatar img');
+        if (!avatarImg) return;
+        if (theme === 'light') {
+          // file you will add for light theme (upload BlueCircuitHandshakeWCuff.png)
+          avatarImg.src = 'Image/BlueCircuitHandshakeWCuff.png';
+        } else {
+          avatarImg.src = 'Image/WhiteCircuitHandshakeWCuff.png';
+        }
+      }
+  
+      // Set initial avatar according to saved or default theme
+      setAvatarForTheme(root.getAttribute('data-theme') || 'dark');
+  
+      // Theme toggle button
       const btn = document.getElementById('themeToggle');
       btn.addEventListener('click', () => {
         const current = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
         root.setAttribute('data-theme', current);
         localStorage.setItem('theme', current);
+        // update avatar immediately after switching theme
+        setAvatarForTheme(current);
       });
     })();
+  
+    // set copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script> --> 
+  </script>
 
-<script>
-  (function () {
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
+  <!-- Cookie / Consent Banner -->
+  <div id="cookie-banner" style="position:fixed;bottom:16px;left:16px;right:16px;background:#2A73CC;color:#fff;padding:12px 14px;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.15);display:none;z-index:9999;">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;">
+      <div style="flex:1;min-width:220px;">
+        <strong>Analytics & Cookies</strong><br>
+        <!-- This portfolio uses Google Analytics (via GTM). Consent Mode runs with limited, cookieless analytics until you accept. -->
+        Analytics are managed through Google Tag Manager with Consent Mode operating in a limited, cookieless state until permission is confirmed.
+        <a href="privacy.html" target="_blank" rel="noopener noreferrer">Learn more</a>
 
-    // Apply saved theme if present
-    if (saved) root.setAttribute('data-theme', saved);
-
-    // Function: set avatar image according to theme
-    function setAvatarForTheme(theme) {
-      const avatarImg = document.querySelector('.avatar img');
-      if (!avatarImg) return;
-      if (theme === 'light') {
-        // file you will add for light theme (upload BlueCircuitHandshakeWCuff.png)
-        avatarImg.src = 'Image/BlueCircuitHandshakeWCuff.png';
+      </div>
+      <div style="display:flex;gap:8px;">
+        <button id="accept-cookies" style="background:#0d4fb6;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer;">Accept</button>
+        <button id="reject-cookies" style="background:#12407e;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer;">Reject</button>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  (function(){
+    // Robust storage helpers (avoid errors if storage is disabled)
+    const key = 'cookie-consent';
+    function getStorage(){
+      try { return window.localStorage; } catch(e) { return null; }
+    }
+    const store = getStorage();
+  
+    function showBannerIfNeeded() {
+      const consent = store ? store.getItem(key) : null;
+      if (!consent) {
+        document.getElementById('cookie-banner').style.display = 'block';
       } else {
-        avatarImg.src = 'Image/WhiteCircuitHandshakeWCuff.png';
+        // If previously accepted, ensure consent is granted (in case script ran before)
+        if (consent === 'accepted' && typeof gtag === 'function') {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted'
+            // 'ad_user_data': 'granted',
+            // 'ad_personalization': 'granted',
+            // 'functionality_storage': 'granted'
+          });
+        }
       }
     }
-
-    // Set initial avatar according to saved or default theme
-    setAvatarForTheme(root.getAttribute('data-theme') || 'dark');
-
-    // Theme toggle button
-    const btn = document.getElementById('themeToggle');
-    btn.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      root.setAttribute('data-theme', current);
-      localStorage.setItem('theme', current);
-      // update avatar immediately after switching theme
-      setAvatarForTheme(current);
-    });
+  
+    function recordConsent(val) {
+      if (store) store.setItem(key, val);
+      document.getElementById('cookie-banner').style.display = 'none';
+  
+      if (typeof gtag === 'function') {
+        if (val === 'accepted') {
+          // User accepted: upgrade consent → full GA4 tracking
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted'
+            // 'ad_user_data': 'granted',
+            // 'ad_personalization': 'granted',
+            // 'functionality_storage': 'granted'
+          });
+        } else {
+          // User rejected: remain in limited/cookieless mode
+          gtag('consent', 'update', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied'
+            // 'ad_user_data': 'denied',
+            // 'ad_personalization': 'denied',
+            // 'functionality_storage': 'denied'
+          });
+        }
+      }
+    }
+  
+    document.getElementById('accept-cookies').addEventListener('click', function(){ recordConsent('accepted'); });
+    document.getElementById('reject-cookies').addEventListener('click', function(){ recordConsent('rejected'); });
+  
+    // Show on first load if no decision
+    showBannerIfNeeded();
   })();
-
-  // set copyright year
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+  </script>
+  
   
 </body>
 </html>
