@@ -319,6 +319,17 @@
     color: var(--muted);     /* matches footer text color */
     text-decoration: none;   /* ensure no underline on the bullet */
   }
+
+  .footer-icon img {
+    vertical-align: middle;
+    filter: grayscale(100%) brightness(0.3);
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+  
+  .footer-icon:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%) brightness(1);
+  }
     
   @media (max-width: 620px) {
     header { grid-template-columns: 72px 1fr; }
@@ -446,10 +457,13 @@
         </a>
 
       <p class="footer">
+        <a href="https://abdullahMzafar.github.io" class="footer-icon" target="_blank" rel="noopener noreferrer" aria-label="AMZ Portfolio">
+          <img src="Favicon/favicon-32x32.png" alt="AMZ Portfolio" width="18" height="18">
+        </a>
         © <span id="year"></span> Abdullah M. Zafar
         <span class="separator"> • </span>
-        <a href="https://abdullahMzafar.github.io" target="_blank" rel="noopener noreferrer">abdullahMzafar.github.io</a>
-        <span class="separator"> • </span>
+        <!-- <a href="https://abdullahMzafar.github.io" target="_blank" rel="noopener noreferrer">abdullahMzafar.github.io</a>
+        <span class="separator"> • </span> -->
         <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
       </p>
     </section>
