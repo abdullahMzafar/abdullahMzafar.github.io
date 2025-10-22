@@ -292,23 +292,20 @@
     color: var(--muted);
     font-size: 12.8px;
   }
+
+  .footer-link {
+    color: #2A73CC;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
   
-  /* Footer links: high contrast, consistent after click */
-  .footer a {
-    color: var(--link-color, #2A73CC);       /* your preferred blue */
+  .footer-link:hover {
+    color: #6FA8FF; /* Slightly lighter blue on hover */
   }
   
   /* Prevent different color for visited links */
-  .footer a:visited {
+  .footer-link:visited {
     color: var(--link-color, #2A73CC);
-  }
-  
-  /* Optional: nicer hover/focus state */
-  .footer a:hover,
-  .footer a:focus-visible {
-    color: var(--link-hover-color, #6FA8FF); /* slightly brighter blue */
-    text-decoration-thickness: 2px;          /* subtle emphasis */
-    outline: none;                           /* avoid default focus outline */
   }
   
   /* Keep the dot clean and un-underlined */
@@ -470,7 +467,7 @@
         <span class="separator"> • </span>
         <!-- <a href="https://abdullahMzafar.github.io" target="_blank" rel="noopener noreferrer">abdullahMzafar.github.io</a>
         <span class="separator"> • </span> -->
-        <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        <a href="privacy.html" class="footer-link" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
       </p>
     </section>
   </main>
