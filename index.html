@@ -299,8 +299,11 @@
     transition: color 0.2s ease;
   }
   
-  .footer-link:hover {
-    color: #6FA8FF; /* Slightly lighter blue on hover */
+  .footer-link:hover,
+  .footer-link:focus-visible {
+    color: var(--link-hover-color, #6FA8FF); /* slightly brighter blue */
+    text-decoration-thickness: 2px;          /* subtle emphasis */
+    outline: none;                           /* avoid default focus outline */
   }
   
   /* Prevent different color for visited links */
