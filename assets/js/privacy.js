@@ -1,7 +1,8 @@
-document.getElementById('last-updated').textContent =
-  new Date(document.lastModified).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
+const lastUpdated = new Date(document.lastModified);
+  document.getElementById('last-updated').textContent =
+    lastUpdated.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
 
