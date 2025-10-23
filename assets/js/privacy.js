@@ -1,4 +1,2 @@
-<script>
-    document.getElementById('last-updated').textContent =
-      new Date(document.lastModified).toLocaleDateString();
-</script> 
+document.getElementById('last-updated').textContent =
+  new Date(document.lastModified).toLocaleDateString();
