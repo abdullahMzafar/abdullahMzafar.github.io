@@ -1,102 +1,95 @@
-function () {
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
+/* ---------- Theme Toggle ---------- */
+function initThemeToggle() {
+const root = document.documentElement;
+const saved = localStorage.getItem('theme');
 
-    // Apply saved theme if present
-    if (saved) root.setAttribute('data-theme', saved);
+// Apply saved theme or default to dark
+const theme = saved || 'dark';
+root.setAttribute('data-theme', theme);
 
-    // Function: set avatar image according to theme
-    function setAvatarForTheme(theme) {
-      const avatarImg = document.querySelector('.avatar img');
-      if (!avatarImg) return;
-      if (theme === 'light') {
-        // file you will add for light theme (upload BlueCircuitHandshakeWCuff.png)
-        avatarImg.src = 'Image/BlueCircuitHandshakeWCuff.png';
-      } else {
-        avatarImg.src = 'Image/WhiteCircuitHandshakeWCuff.png';
-      }
-    }
+// Function to set avatar image according to theme
+function setAvatarForTheme(currentTheme) {
+const avatarImg = document.querySelector('.avatar img');
+if (!avatarImg) return;
 
-    // Set initial avatar according to saved or default theme
-    setAvatarForTheme(root.getAttribute('data-theme') || 'dark');
+```
+avatarImg.src = currentTheme === 'light'
+  ? 'Image/BlueCircuitHandshakeWCuff.png'
+  : 'Image/WhiteCircuitHandshakeWCuff.png';
+```
 
-    // Theme toggle button
-    const btn = document.getElementById('themeToggle');
-    btn.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      root.setAttribute('data-theme', current);
-      localStorage.setItem('theme', current);
-      // update avatar immediately after switching theme
-      setAvatarForTheme(current);
-    });
-}();
+}
 
-  // set copyright year
-  document.getElementById('year').textContent = new Date().getFullYear();
+// Set initial avatar
+setAvatarForTheme(theme);
 
-  
-function(){
-    // Robust storage helpers (avoid errors if storage is disabled)
-    const key = 'cookie-consent';
-    function getStorage(){
-      try { return window.localStorage; } catch(e) { return null; }
-    }
-    const store = getStorage();
-  
-    function showBannerIfNeeded() {
-      const consent = store ? store.getItem(key) : null;
-      if (!consent) {
-        document.getElementById('cookie-banner').style.display = 'block';
-      } else {
-        // If previously accepted, ensure consent is granted (in case script ran before)
-        if (consent === 'accepted' && typeof gtag === 'function') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'analytics_storage': 'granted'
-            // 'ad_user_data': 'granted',
-            // 'ad_personalization': 'granted',
-            // 'functionality_storage': 'granted'
-          });
-        }
-      }
-    }
-  
-    function recordConsent(val) {
-      if (store) store.setItem(key, val);
-      document.getElementById('cookie-banner').style.display = 'none';
-  
-      if (typeof gtag === 'function') {
-        if (val === 'accepted') {
-          // User accepted: upgrade consent → full GA4 tracking
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'analytics_storage': 'granted'
-            // 'ad_user_data': 'granted',
-            // 'ad_personalization': 'granted',
-            // 'functionality_storage': 'granted'
-          });
-        } else {
-          // User rejected: remain in limited/cookieless mode
-          gtag('consent', 'update', {
-            'ad_storage': 'denied',
-            'analytics_storage': 'denied'
-            // 'ad_user_data': 'denied',
-            // 'ad_personalization': 'denied',
-            // 'functionality_storage': 'denied'
-          });
-        }
-      }
-    }
-  
-    document.getElementById('accept-cookies').addEventListener('click', function(){ recordConsent('accepted'); });
-    document.getElementById('reject-cookies').addEventListener('click', function(){ recordConsent('rejected'); });
-  
-    // Show on first load if no decision
-    showBannerIfNeeded();
-}();
+// Theme toggle button logic
+const btn = document.getElementById('themeToggle');
+if (btn) {
+btn.addEventListener('click', () => {
+const current = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+root.setAttribute('data-theme', current);
+localStorage.setItem('theme', current);
+setAvatarForTheme(current);
+});
+}
 
-// --- Initialize both once DOM is ready ---
+// Set copyright year
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+}
+
+/* ---------- Cookie Consent Banner ---------- */
+function initCookieConsent() {
+const key = 'cookie-consent';
+const store = (() => {
+try { return window.localStorage; } catch (e) { return null; }
+})();
+
+function recordConsent(val) {
+if (store) store.setItem(key, val);
+const banner = document.getElementById('cookie-banner');
+if (banner) banner.style.display = 'none';
+
+```
+if (typeof gtag === 'function') {
+  gtag('consent', 'update', {
+    'ad_storage': val === 'accepted' ? 'granted' : 'denied',
+    'analytics_storage': val === 'accepted' ? 'granted' : 'denied',
+  });
+}
+```
+
+}
+
+function showBannerIfNeeded() {
+const consent = store ? store.getItem(key) : null;
+const banner = document.getElementById('cookie-banner');
+if (!banner) return;
+
+```
+if (!consent) {
+  banner.style.display = 'block';
+} else if (consent === 'accepted' && typeof gtag === 'function') {
+  gtag('consent', 'update', {
+    'ad_storage': 'granted',
+    'analytics_storage': 'granted',
+  });
+}
+```
+
+}
+
+const acceptBtn = document.getElementById('accept-cookies');
+const rejectBtn = document.getElementById('reject-cookies');
+if (acceptBtn) acceptBtn.addEventListener('click', () => recordConsent('accepted'));
+if (rejectBtn) rejectBtn.addEventListener('click', () => recordConsent('rejected'));
+
+showBannerIfNeeded();
+}
+
+/* ---------- Initialize Both ---------- */
 document.addEventListener('DOMContentLoaded', () => {
-  initThemeToggle();
-  initCookieConsent();
+initThemeToggle();
+initCookieConsent();
 });
