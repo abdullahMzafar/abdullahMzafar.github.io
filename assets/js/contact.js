@@ -1,5 +1,12 @@
 console.log('✅ contact.js loaded correctly');
 
+// Immediately restore theme from localStorage
+(function () {
+  const root = document.documentElement;
+  const saved = localStorage.getItem('theme');
+  if (saved) root.setAttribute('data-theme', saved);
+})();
+
 
 let recaptchaWidgetId = null;
 
