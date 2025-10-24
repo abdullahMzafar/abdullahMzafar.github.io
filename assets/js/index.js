@@ -89,7 +89,5 @@ showBannerIfNeeded();
 }
 
 /* ---------- Initialize Both ---------- */
-document.addEventListener('DOMContentLoaded', () => {
 initThemeToggle();
 initCookieConsent();
-});
