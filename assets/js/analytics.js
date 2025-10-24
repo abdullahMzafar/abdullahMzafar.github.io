@@ -1,3 +1,5 @@
+console.log('✅ analytics.js loaded correctly');
+
 <!-- Google Consent Mode: default deny until user accepts -->
 
 // Initialize dataLayer and default consent (no cookies until user accepts)
