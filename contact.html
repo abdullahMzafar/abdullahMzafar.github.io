@@ -15,7 +15,7 @@
      img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com; 
      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
      font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; 
-     script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.gstatic.com; 
+     script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.gstatic.com; 
      connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://region2.google-analytics.com https://www.google.com https://www.gstatic.com; 
      frame-src 'self' https://www.google.com; 
      base-uri 'self'; 
@@ -228,13 +228,13 @@
   </style>
 </head>
 
-<script>
+<!-- <script>
   (function () {
     const root = document.documentElement;
     const saved = localStorage.getItem('theme');
     if (saved) root.setAttribute('data-theme', saved);
   })();
-</script>
+</script> -->
 
 
 <body>
