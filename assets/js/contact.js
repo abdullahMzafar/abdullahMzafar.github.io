@@ -1,4 +1,4 @@
-console.log('✅ contact.js loaded correctly');
+/* console.log('✅ contact.js loaded correctly'); */
 
 // Immediately restore theme from localStorage
 (function () {
