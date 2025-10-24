@@ -1,3 +1,6 @@
+console.log('✅ index.js loaded correctly');
+
+
 /* index.js - combined theme toggle + cookie consent with debugging */
 
 // Small helper to safely run init even if DOMContentLoaded already fired
