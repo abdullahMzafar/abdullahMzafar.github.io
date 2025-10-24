@@ -1,4 +1,4 @@
-console.log('✅ analytics.js loaded correctly');
+/* console.log('✅ analytics.js loaded correctly'); */
 
 <!-- Google Consent Mode: default deny until user accepts -->
 
