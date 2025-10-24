@@ -1,4 +1,4 @@
-console.log('✅ index.js loaded correctly');
+/* console.log('✅ index.js loaded correctly'); */
 
 
 /* index.js - combined theme toggle + cookie consent with debugging */
