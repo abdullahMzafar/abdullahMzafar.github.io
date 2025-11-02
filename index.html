@@ -10,10 +10,20 @@
   
   <!-- Content Security Policy (via meta tag for GitHub Pages) -->
   <!-- This CSP supports: self-hosted content + GTM/GA4 + reCAPTCHA v2 + data URIs for images -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.gstatic.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://region2.google-analytics.com; frame-src 'self' https://www.google.com; base-uri 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+    img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
+    font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; 
+    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.gstatic.com; 
+    connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com https://region2.google-analytics.com; 
+    frame-src 'self' https://www.google.com; 
+    base-uri 'self'; 
+    form-action 'self'; 
+    upgrade-insecure-requests; 
+    block-all-mixed-content">
   
   <!-- Google Consent Mode: default deny until user accepts -->
-  <script>
+  <!-- <script>
     // Initialize dataLayer and default consent (no cookies until user accepts)
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
@@ -26,18 +36,19 @@
       // 'functionality_storage': 'denied',
       // 'security_storage': 'granted' // reCAPTCHA relies on security storage
     });
-  </script>
+  </script> -->
   
   <!-- Google Tag Manager -->
-  <script>
+  <!-- <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5V8BZHS9');
-  </script>
+  </script> -->
   <!-- End Google Tag Manager -->
 
+  <script src="/assets/js/analytics.js"></script>
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -301,7 +312,7 @@
   
   .footer-link:hover,
   .footer-link:focus-visible {
-    color: var(--link-hover-color, #6FA8FF); /* slightly brighter blue */
+    color: #6FA8FF;                          /* slightly brighter blue */
     text-decoration-thickness: 2px;          /* subtle emphasis */
     outline: none;                           /* avoid default focus outline */
     transform: scale(1.10);                  /* Subtle hover pop */
@@ -476,7 +487,7 @@
     </section>
   </main>
 
-  <script>
+  <!-- <script>
     (function () {
       const root = document.documentElement;
       const saved = localStorage.getItem('theme');
@@ -512,7 +523,7 @@
   
     // set copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  </script> -->
 
   <!-- Cookie / Consent Banner -->
   <div id="cookie-banner" style="position:fixed;bottom:16px;left:16px;right:16px;background:#2A73CC;color:#fff;padding:12px 14px;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.15);display:none;z-index:9999;">
@@ -531,7 +542,7 @@
     </div>
   </div>
   
-  <script>
+  <!-- <script>
   (function(){
     // Robust storage helpers (avoid errors if storage is disabled)
     const key = 'cookie-consent';
@@ -591,8 +602,9 @@
     // Show on first load if no decision
     showBannerIfNeeded();
   })();
-  </script>
-  
+  </script> -->
+
+  <script src="/assets/js/index.js"></script>
   
 </body>
 </html>
